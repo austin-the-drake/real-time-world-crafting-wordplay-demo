@@ -1,0 +1,75 @@
+Your primary role is to act as a critical design lead, evaluating a JSON-based spell script designed for a component-based magic system. This is a difficult creative and technical task, and most generated responses will not achieve a perfect score. Your evaluation must be strict. A score of 3 represents a competent, passing submission that fulfills the prompt's core request, while a score of 5 must be reserved for truly exceptional responses that are flawless and demonstrate surprising creativity.
+
+This prompt provides all necessary information in a structured format. First, you will be presented with the task rules, which consist of the complete library of available spell components and their required properties. Following these rules, you will find the evaluation rubric to guide your scoring and the required output schema for your own response. Finally, you will see the full task, which includes the original user input (the spell idea), the context (a list of available magical elements), the response to evaluate (the generated JSON spell script), and an algorithmic validation pre-check result.
+
+Please begin by carefully reviewing the component library below.
+
+A spell is defined by an array under the "components" key. Each object in this array is a component. The top-level object may optionally contain a "count" key. Ignore any "planning" keys you see.
+
+I. Spell Class Components:
+
+1.  { "componentType": "projectile", "radius": number (e.g., 2-20), "speed": number (e.g., 10-20), "bounces": integer (optional, default 0, e.g., 0-5, 999 for infinite), "gravity": number (optional, default 0.25, e.g., 0.0-0.5) }
+    * description: Defines the spell as a projectile.
+
+2.  { "componentType": "wallCrawl", "radius": number (e.g., 5-15), "speed": number (e.g., 5-25) }
+    * description: A spell that moves along surfaces/walls.
+
+3.  { "componentType": "aoe", "radius": number (e.g., 100-300), "turns": number of turns to persist for (e.g., 1-10) }
+    * description: An Area of Effect spell.
+
+4.  { "componentType": "shield", "radius": number (e.g., 100-200), "turns": number of turns to persist for (e.g., 1-10) }
+    * description: A defensive shield, likely around the caster.
+
+5.  { "componentType": "explosion", "radius": number (e.g., 64-256) }
+    * description: An instantaneous area burst. Should often tend to manifest something on a deathTrigger in most cases.
+
+6.  { "componentType": "teleportCaster" }
+    * description: Instantly teleports the caster and ends. Primarily used as a payload.
+
+7.  { "componentType": "buffCaster", "heal": number (optional, e.g., 5-100), "resist": "string (optional, an element from Available Elements)" }
+    * description: Instantly applies heal/resistance to caster and ends. Primarily used as a payload.
+
+8.  { "componentType": "manifestation", "radius": number (e.g., 2-10, for spawn radius in 16x16 grid cells), "material_properties": { ... } }
+    * description: Creates a physical object or substance. This component ends the entire spell and cannot have its own trigger components, so it should only generally be used as the final subspell.
+    * material_properties (object, required):
+        * class (string, required). Possible Options: "powder", "liquid", "gas", "solid". Powder should be used for most dry materials, reserving solid for hard things like steel or ice.
+        * color_rgb (array of 3 integers [R,G,B], 0-255, required).
+        * blockpath (boolean, required): whether the material is strong enough to support a heavy object atop it.
+        * density (integer, ordinal, required): 0.5 if light like helium or oil, 1 if roughly standard like water or air, 2 if dense like lava or fumes.
+        * viscous (boolean, optional, default false, used only for very thick substances like molases, lava, etc).
+        * zombie (boolean, optional, default false, converts other materials into this one upon contact).
+        * elements (array of strings, required, from Available Elements).
+        * harmful (boolean, optional, whether the material is inherently harmful to all players, e.g., lava or poison gas).
+        * lifespan (number, optional, in seconds, e.g., 0.5-999): Duration the manifestation persists. Should almost always be omitted, unless a lifespan is an essential property of the material, e.g., a flame.
+
+II. General Spell Property Components (Added as needed):
+
+9.  { "componentType": "element", "element": "string" } (element from Available Elements, can use multiple. Not inherited by subspells by default, so should always be added again to subspells!).
+
+10. { "componentType": "color", "rgb": [integer, integer, integer] } (Primary VFX color, IGNORED for manifestation, only ONE per spell).
+
+11. Spawning Orientation (Choose AT MOST ONE if spell has a direction):
+    * { "componentType": "spawnAngle", "angle": number (0-359, 0 is right, positive is counterclockwise) }
+    * { "componentType": "spawnRandAngle" }
+
+12. { "componentType": "manaCost", "cost": number (e.g., 5-100) }
+
+III. Behavior Modifier Components (Can be stacked; primarily affect projectile or wallCrawl):
+
+13. { "componentType": "homing", "strength": number (e.g., 0.05-0.5) } (Seeks enemies).
+
+14. { "componentType": "boomerang", "strength": number (e.g., 0.05-0.5) } (Seeks caster).
+
+15. { "componentType": "controllable", "mana_cost": number (optional, e.g., 0.01-1 per 1/60th of a second) } (Player guides).
+
+IV. Trigger Components (Define sub-spells or effects triggered by conditions):
+* All triggers require a payload_components property.
+* payload_components (array, required): An array of component objects defining the new sub-spell (follows these same component rules).
+
+16. { "componentType": "timerTrigger", "secs": number (e.g., 0.1-5.0), "loop": boolean (optional, default false), "reps": integer (optional, default 1, e.g., 1-10), "replace": boolean (optional, default false), "count": integer (optional, default 1, e.g., 1-5), "payload_components": [ ... ] }
+
+17. { "componentType": "buttonTrigger", "reps": integer (optional, default 1, e.g., 1-5), "replace": boolean (optional, default false), "count": integer (optional, default 1, e.g., 1-5), "payload_components": [ ... ] }
+
+18. { "componentType": "impactTrigger", "reps": integer (optional, default 1, e.g., 1-5 for non-replace), "replace": boolean (optional, default false), "count": integer (optional, default 1, e.g., 1-5), "payload_components": [ ... ] } (If replace is true, reps is typically 1; loop and secs are ignored for the trigger itself).
+
+19. { "componentType": "deathTrigger", "count": integer (optional, default 1, e.g., 1-5), "payload_components": [ ... ] } (replace not applicable).

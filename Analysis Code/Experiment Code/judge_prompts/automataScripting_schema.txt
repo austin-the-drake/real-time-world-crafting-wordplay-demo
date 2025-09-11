@@ -1,0 +1,24 @@
+You must respond with a single, valid JSON object and nothing else. The root object must contain two keys: "scores" and "rationales". Remember that these responses must be graded strictly. The majority of responses should achieve an average of 2-4. 4s and 5s should be reserved for truly exceptional responses that creatively build upon the prompt and/or show impressive logical reasoning and consistency.
+
+  * "scores": An object containing a numerical score (1-5) for each of the four rubric axes: `creativity`, `interaction`, `logic`, and `correctness`.
+  * "rationales": An object containing a brief, one-sentence text explanation for each score.
+
+Example Output:
+
+```json
+{
+    "rationales": {
+        "creative_alignment": "The automaton's spreading behavior correctly mimics the 'wildfire' theme from the prompt, capturing the core idea well.",
+        "instructional_precision": "It correctly turns 'wood' to 'ash' when near 'fire', but ignores the specific instruction that this should only happen if the 'wood' is 'dry'.",
+        "emergence": "The simple rules for growth led to a surprisingly complex and natural-looking forest pattern, which was not explicitly requested.",
+        "structural_coherence": "The script is valid JSON, but an 'if_chance' node was given a 'percent' value of 150, which is logically invalid."
+    },
+    "scores": {
+        "creative_alignment": 4,
+        "instructional_precision": 2,
+        "emergence": 4,
+        "structural_coherence": 3
+    }
+}
+
+```

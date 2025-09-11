@@ -1,0 +1,838 @@
+Contents:
+
+Experiment 1A - magical spell scripting
+Experiment 1B - cellular automata scripting
+Experiment 2 (magical spells only)
+Testing whether grounded inputs score higher
+Judge Validation - magical spell scripting
+Judge Validation - cellular automata scripting
+Testing Latency between factors
+Human Pilot vs LLM
+
+
+
+
+
+
+
+
+
+Experiment 1A - magical spell scripting
+
+Results for: score_creative_alignment 
+Anova Table (Type 3 tests)
+
+Response: score_creative_alignment
+                             Effect           df  MSE         F   ges p.value
+1                        model_name 2.76, 132.52 0.34 58.43 ***  .119   <.001
+2                     shot_strategy  1.89, 90.74 0.18      0.53 <.001    .581
+3                          planning        1, 48 0.30   9.04 **  .006    .004
+4          model_name:shot_strategy 5.36, 257.31 0.19    2.31 *  .006    .040
+5               model_name:planning 2.87, 137.63 0.19    2.33 +  .003    .080
+6            shot_strategy:planning  1.96, 94.28 0.15      0.29 <.001    .744
+7 model_name:shot_strategy:planning 4.80, 230.61 0.20      0.95  .002    .447
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash   0.1327 0.0456 48   2.910  0.0271
+ claude.sonnet.4.20250514 - gemma.3.4b.it      0.5748 0.0539 48  10.662  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini       0.1429 0.0415 48   3.440  0.0064
+ gemini.2.5.flash - gemma.3.4b.it              0.4422 0.0455 48   9.723  <.0001
+ gemini.2.5.flash - gpt.4.1.mini               0.0102 0.0414 48   0.247  0.9947
+ gemma.3.4b.it - gpt.4.1.mini                 -0.4320 0.0486 48  -8.892  <.0001
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ zeroshot - oneshot   0.0153 0.0331 48   0.462  0.8893
+ zeroshot - fewshot  -0.0153 0.0279 48  -0.548  0.8478
+ oneshot - fewshot   -0.0306 0.0279 48  -1.098  0.5201
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Results for: score_instructional_precision 
+Anova Table (Type 3 tests)
+
+Response: score_instructional_precision
+                             Effect           df  MSE         F  ges p.value
+1                        model_name 2.81, 134.64 0.28 86.86 *** .139   <.001
+2                     shot_strategy  1.92, 92.09 0.23      1.47 .002    .235
+3                          planning        1, 48 0.28      2.78 .002    .102
+4          model_name:shot_strategy 5.58, 268.00 0.18    2.54 * .006    .024
+5               model_name:planning 2.97, 142.73 0.25    2.77 * .005    .044
+6            shot_strategy:planning  1.98, 95.27 0.15      1.91 .001    .153
+7 model_name:shot_strategy:planning 5.35, 257.04 0.20      1.04 .003    .398
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash   0.0850 0.0364 48   2.335  0.1042
+ claude.sonnet.4.20250514 - gemma.3.4b.it      0.6156 0.0462 48  13.337  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini       0.1293 0.0424 48   3.045  0.0191
+ gemini.2.5.flash - gemma.3.4b.it              0.5306 0.0450 48  11.795  <.0001
+ gemini.2.5.flash - gpt.4.1.mini               0.0442 0.0412 48   1.074  0.7069
+ gemma.3.4b.it - gpt.4.1.mini                 -0.4864 0.0406 48 -11.976  <.0001
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ zeroshot - oneshot   0.0179 0.0361 48   0.495  0.8741
+ zeroshot - fewshot  -0.0383 0.0301 48  -1.271  0.4182
+ oneshot - fewshot   -0.0561 0.0338 48  -1.660  0.2311
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Results for: score_emergence 
+Anova Table (Type 3 tests)
+
+Response: score_emergence
+                             Effect           df  MSE         F  ges p.value
+1                        model_name 2.47, 118.39 0.90 35.63 *** .096   <.001
+2                     shot_strategy  1.91, 91.87 0.40      1.81 .002    .170
+3                          planning        1, 48 0.66    5.78 * .005    .020
+4          model_name:shot_strategy 5.19, 249.02 0.36    2.66 * .007    .021
+5               model_name:planning 2.89, 138.75 0.52      0.81 .002    .487
+6            shot_strategy:planning  1.93, 92.62 0.29    3.63 * .003    .032
+7 model_name:shot_strategy:planning 5.42, 260.39 0.36    2.66 * .007    .020
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash   0.2177 0.0665 48   3.274  0.0103
+ claude.sonnet.4.20250514 - gemma.3.4b.it      0.7143 0.0751 48   9.507  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini       0.2755 0.0586 48   4.699  0.0001
+ gemini.2.5.flash - gemma.3.4b.it              0.4966 0.0903 48   5.497  <.0001
+ gemini.2.5.flash - gpt.4.1.mini               0.0578 0.0618 48   0.936  0.7857
+ gemma.3.4b.it - gpt.4.1.mini                 -0.4388 0.0687 48  -6.389  <.0001
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ zeroshot - oneshot  -0.0408 0.0481 48  -0.848  0.6753
+ zeroshot - fewshot  -0.0842 0.0400 48  -2.105  0.0995
+ oneshot - fewshot   -0.0434 0.0441 48  -0.983  0.5912
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Results for: score_structural_coherence 
+Anova Table (Type 3 tests)
+
+Response: score_structural_coherence
+                             Effect           df  MSE          F   ges p.value
+1                        model_name 2.24, 107.48 0.92 192.28 ***  .412   <.001
+2                     shot_strategy  1.98, 94.85 0.33     2.88 +  .003    .062
+3                          planning        1, 48 0.38       0.38 <.001    .540
+4          model_name:shot_strategy 4.72, 226.55 0.56     2.56 *  .012    .031
+5               model_name:planning 2.54, 122.04 0.55    6.31 **  .015    .001
+6            shot_strategy:planning  1.77, 84.99 0.52       1.48  .002    .233
+7 model_name:shot_strategy:planning 4.95, 237.50 0.45       0.79  .003    .558
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash    0.143 0.0443 48   3.226  0.0117
+ claude.sonnet.4.20250514 - gemma.3.4b.it       1.483 0.0755 48  19.646  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini        0.412 0.0559 48   7.368  <.0001
+ gemini.2.5.flash - gemma.3.4b.it               1.340 0.0865 48  15.488  <.0001
+ gemini.2.5.flash - gpt.4.1.mini                0.269 0.0664 48   4.045  0.0011
+ gemma.3.4b.it - gpt.4.1.mini                  -1.071 0.0737 48 -14.536  <.0001
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ zeroshot - oneshot   0.0153 0.0425 48   0.361  0.9310
+ zeroshot - fewshot  -0.0765 0.0417 48  -1.836  0.1690
+ oneshot - fewshot   -0.0918 0.0387 48  -2.372  0.0556
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Effect Sizes (gemma-3-4b-it vs. Other)
+
+Effect Size for: score_creative_alignment 
+Mean Score (gemma-3-4b-it): 2.75 
+Mean Score (Other Models): 3.24 
+Cohen's d: -0.829 
+
+Effect Size for: score_instructional_precision 
+Mean Score (gemma-3-4b-it): 2.2 
+Mean Score (Other Models): 2.75 
+Cohen's d: -0.907 
+
+Effect Size for: score_emergence 
+Mean Score (gemma-3-4b-it): 2.16 
+Mean Score (Other Models): 2.73 
+Cohen's d: -0.701 
+
+Effect Size for: score_structural_coherence 
+Mean Score (gemma-3-4b-it): 3.27 
+Mean Score (Other Models): 4.58 
+Cohen's d: -1.807 
+
+Average Success Rate (ASR)
+
+  model_name               `zeroshot + Standard` `zeroshot + CoT` `oneshot + Standard` `oneshot + CoT`
+  <fct>                                    <dbl>            <dbl>                <dbl>           <dbl>
+1 claude-sonnet-4-20250514                  1                1                       1            1   
+2 gemini-2.5-flash                          0.96             1                       1            0.98
+3 gemma-3-4b-it                             1                0.98                    1            1   
+4 gpt-4.1-mini                              1                1                       1            1   
+  `fewshot + Standard` `fewshot + CoT`
+                 <dbl>           <dbl>
+1                    1               1
+2                    1               1
+3                    1               1
+4                    1               1
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment 1B - cellular automata scripting
+
+Results for: score_creative_alignment 
+Anova Table (Type 3 tests)
+
+Response: score_creative_alignment
+                             Effect           df  MSE          F   ges p.value
+1                        model_name 2.22, 106.47 1.26 117.88 ***  .349   <.001
+2                     shot_strategy  1.91, 91.79 0.43  21.13 ***  .028   <.001
+3                          planning        1, 48 0.38  15.85 ***  .010   <.001
+4          model_name:shot_strategy 4.49, 215.63 0.53       1.14  .004    .340
+5               model_name:planning 2.74, 131.48 0.45       0.78  .002    .499
+6            shot_strategy:planning  1.84, 88.37 0.34       0.91 <.001    .400
+7 model_name:shot_strategy:planning 4.12, 197.82 0.58       1.05  .004    .386
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash    0.143 0.0645 48   2.216  0.1336
+ claude.sonnet.4.20250514 - gemma.3.4b.it       1.327 0.0826 48  16.057  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini        0.211 0.0591 48   3.569  0.0044
+ gemini.2.5.flash - gemma.3.4b.it               1.184 0.1060 48  11.172  <.0001
+ gemini.2.5.flash - gpt.4.1.mini                0.068 0.0717 48   0.948  0.7791
+ gemma.3.4b.it - gpt.4.1.mini                  -1.116 0.0843 48 -13.227  <.0001
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ fewshot - oneshot    0.0867 0.0422 48   2.054  0.1105
+ fewshot - zeroshot   0.2908 0.0504 48   5.767  <.0001
+ oneshot - zeroshot   0.2041 0.0447 48   4.561  0.0001
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Results for: score_instructional_precision 
+Anova Table (Type 3 tests)
+
+Response: score_instructional_precision
+                             Effect           df  MSE          F   ges p.value
+1                        model_name 2.20, 105.77 1.41 115.53 ***  .310   <.001
+2                     shot_strategy  1.90, 91.01 0.53  23.75 ***  .029   <.001
+3                          planning        1, 48 0.55    7.98 **  .005    .007
+4          model_name:shot_strategy 5.25, 252.07 0.57       1.47  .005    .199
+5               model_name:planning 2.62, 125.86 0.53       2.14  .004    .107
+6            shot_strategy:planning  1.97, 94.70 0.35       1.17 <.001    .316
+7 model_name:shot_strategy:planning 5.08, 243.82 0.56       0.77  .003    .571
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash   0.0884 0.0587 48   1.505  0.4423
+ claude.sonnet.4.20250514 - gemma.3.4b.it      1.3639 0.0872 48  15.647  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini       0.2211 0.0718 48   3.078  0.0175
+ gemini.2.5.flash - gemma.3.4b.it              1.2755 0.1100 48  11.581  <.0001
+ gemini.2.5.flash - gpt.4.1.mini               0.1327 0.0782 48   1.696  0.3369
+ gemma.3.4b.it - gpt.4.1.mini                 -1.1429 0.0876 48 -13.044  <.0001
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ fewshot - oneshot     0.112 0.0456 48   2.464  0.0450
+ fewshot - zeroshot    0.342 0.0557 48   6.134  <.0001
+ oneshot - zeroshot    0.230 0.0499 48   4.602  0.0001
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Results for: score_emergence 
+Anova Table (Type 3 tests)
+
+Response: score_emergence
+                             Effect           df  MSE          F   ges p.value
+1                        model_name 2.29, 109.69 1.00 128.81 ***  .333   <.001
+2                     shot_strategy  1.96, 93.84 0.47  16.08 ***  .024   <.001
+3                          planning        1, 48 0.28  17.57 ***  .008   <.001
+4          model_name:shot_strategy 4.91, 235.70 0.41       1.62  .006    .156
+5               model_name:planning 2.54, 122.09 0.34       1.00  .001    .386
+6            shot_strategy:planning  1.93, 92.71 0.35       0.23 <.001    .790
+7 model_name:shot_strategy:planning 4.53, 217.55 0.43       0.83  .003    .521
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash   0.0748 0.0636 48   1.177  0.6440
+ claude.sonnet.4.20250514 - gemma.3.4b.it      1.2415 0.0796 48  15.602  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini       0.2483 0.0456 48   5.442  <.0001
+ gemini.2.5.flash - gemma.3.4b.it              1.1667 0.0926 48  12.599  <.0001
+ gemini.2.5.flash - gpt.4.1.mini               0.1735 0.0659 48   2.632  0.0537
+ gemma.3.4b.it - gpt.4.1.mini                 -0.9932 0.0747 48 -13.304  <.0001
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ fewshot - oneshot     0.117 0.0507 48   2.315  0.0633
+ fewshot - zeroshot    0.273 0.0494 48   5.525  <.0001
+ oneshot - zeroshot    0.156 0.0446 48   3.491  0.0029
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Results for: score_structural_coherence 
+Anova Table (Type 3 tests)
+
+Response: score_structural_coherence
+                             Effect           df  MSE         F   ges p.value
+1                        model_name 2.62, 125.95 0.80 18.81 ***  .048   <.001
+2                     shot_strategy  1.55, 74.33 1.17 22.32 ***  .049   <.001
+3                          planning        1, 48 0.84      1.55  .002    .220
+4          model_name:shot_strategy 3.53, 169.65 1.07  7.20 ***  .033   <.001
+5               model_name:planning 2.46, 118.07 0.82      0.78  .002    .486
+6            shot_strategy:planning  1.51, 72.46 1.09      0.01 <.001    .968
+7 model_name:shot_strategy:planning 3.64, 174.83 0.88      0.91  .004    .450
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+Sphericity correction method: GG 
+
+Post-Hoc Tests (Tukey's HSD)
+ contrast                                    estimate     SE df t.ratio p.value
+ claude.sonnet.4.20250514 - gemini.2.5.flash   0.2619 0.0569 48   4.604  0.0002
+ claude.sonnet.4.20250514 - gemma.3.4b.it      0.4252 0.0571 48   7.445  <.0001
+ claude.sonnet.4.20250514 - gpt.4.1.mini       0.4660 0.0650 48   7.167  <.0001
+ gemini.2.5.flash - gemma.3.4b.it              0.1633 0.0723 48   2.257  0.1227
+ gemini.2.5.flash - gpt.4.1.mini               0.2041 0.0796 48   2.564  0.0628
+ gemma.3.4b.it - gpt.4.1.mini                  0.0408 0.0789 48   0.517  0.9545
+
+Results are averaged over the levels of: planning, shot_strategy 
+P value adjustment: tukey method for comparing a family of 4 estimates 
+ contrast           estimate     SE df t.ratio p.value
+ fewshot - oneshot   -0.0204 0.0462 48  -0.442  0.8981
+ fewshot - zeroshot   0.3827 0.0756 48   5.060  <.0001
+ oneshot - zeroshot   0.4031 0.0775 48   5.200  <.0001
+
+Results are averaged over the levels of: planning, model_name 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Effect Sizes (gemma-3-4b-it vs. Other)
+
+Effect Size for: score_creative_alignment 
+Mean Score (gemma-3-4b-it): 2.6 
+Mean Score (Other Models): 3.81 
+Cohen's d: -1.634 
+
+Effect Size for: score_instructional_precision 
+Mean Score (gemma-3-4b-it): 2.28 
+Mean Score (Other Models): 3.53 
+Cohen's d: -1.48 
+
+Effect Size for: score_emergence 
+Mean Score (gemma-3-4b-it): 1.68 
+Mean Score (Other Models): 2.82 
+Cohen's d: -1.577 
+
+Effect Size for: score_structural_coherence 
+Mean Score (gemma-3-4b-it): 4.55 
+Mean Score (Other Models): 4.75 
+Cohen's d: -0.224 
+
+Average Success Rate (ASR)
+
+  model_name               `fewshot + Standard` `fewshot + CoT` `oneshot + Standard` `oneshot + CoT`
+  <fct>                                   <dbl>           <dbl>                <dbl>           <dbl>
+1 claude-sonnet-4-20250514                 0.98            1                    1               1   
+2 gemini-2.5-flash                         0.94            0.98                 1               1   
+3 gemma-3-4b-it                            1               1                    0.98            1   
+4 gpt-4.1-mini                             1               1                    0.98            0.98
+  `zeroshot + Standard` `zeroshot + CoT`
+                  <dbl>            <dbl>
+1                  1                1   
+2                  0.82             0.92
+3                  0.92             0.76
+4                  0.9              0.88
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment 2 (magical spells only)
+
+[1] "Results for tree edit distance"
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: score_tree_edit_distance ~ description_style * description_detail +  
+    param_component_complexity + param_nesting_complexity + (1 |      procedural_code_hash)
+   Data: analysis_data
+
+REML criterion at convergence: 703.3
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.8730 -0.5130 -0.0591  0.4616  3.9020 
+
+Random effects:
+ Groups               Name        Variance Std.Dev.
+ procedural_code_hash (Intercept)  6.848   2.617   
+ Residual                         18.146   4.260   
+Number of obs: 120, groups:  procedural_code_hash, 30
+
+Fixed effects:
+                                                     Estimate Std. Error      df t value Pr(>|t|)    
+(Intercept)                                            4.3363     2.1852 32.8536   1.984 0.055620 .  
+description_styletechnical                            -7.4000     1.0999 87.0000  -6.728 1.74e-09 ***
+description_detailsummary                              0.8667     1.0999 87.0000   0.788 0.432853    
+param_component_complexity                            -0.3090     0.4364 27.0000  -0.708 0.484913    
+param_nesting_complexity                               1.8563     0.4464 27.0000   4.158 0.000291 ***
+description_styletechnical:description_detailsummary   5.6000     1.5554 87.0000   3.600 0.000528 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) dscrptn_s dscrptn_d prm_c_ prm_n_
+dscrptn_sty -0.252                                  
+dscrptn_dtl -0.252  0.500                           
+prm_cmpnnt_ -0.586  0.000     0.000                 
+prm_nstng_c -0.672  0.000     0.000    -0.038       
+dscrptn_s:_  0.178 -0.707    -0.707     0.000  0.000
+
+[1] "R-squared for tree edit distance model:"
+
+  Conditional R2: 0.572
+     Marginal R2: 0.411
+
+[1] "Results for Jaccard similarity"
+
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: score_jaccard_similarity ~ description_style * description_detail +  
+    param_component_complexity + param_nesting_complexity + (1 |      procedural_code_hash)
+   Data: analysis_data
+
+REML criterion at convergence: -162.9
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.1241 -0.5693 -0.0132  0.5580  4.3980 
+
+Random effects:
+ Groups               Name        Variance Std.Dev.
+ procedural_code_hash (Intercept) 0.004965 0.07046 
+ Residual                         0.008504 0.09222 
+Number of obs: 120, groups:  procedural_code_hash, 30
+
+Fixed effects:
+                                                      Estimate Std. Error        df t value Pr(>|t|)    
+(Intercept)                                           0.356797   0.053892 31.372901   6.621 2.01e-07 ***
+description_styletechnical                            0.131267   0.023811 87.000000   5.513 3.56e-07 ***
+description_detailsummary                            -0.109373   0.023811 87.000000  -4.593 1.46e-05 ***
+param_component_complexity                           -0.002025   0.010891 27.000000  -0.186   0.8539    
+param_nesting_complexity                              0.019243   0.011142 27.000000   1.727   0.0956 .  
+description_styletechnical:description_detailsummary -0.034740   0.033674 87.000000  -1.032   0.3051    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) dscrptn_s dscrptn_d prm_c_ prm_n_
+dscrptn_sty -0.221                                  
+dscrptn_dtl -0.221  0.500                           
+prm_cmpnnt_ -0.593  0.000     0.000                 
+prm_nstng_c -0.680  0.000     0.000    -0.038       
+dscrptn_s:_  0.156 -0.707    -0.707     0.000  0.000
+
+[1] "R-squared for Jaccard similarity model:"
+
+  Conditional R2: 0.606
+     Marginal R2: 0.376
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Testing whether grounded inputs score higher
+
+Analysis for: score_creative_alignment
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  score_creative_alignment by procedural
+W = 16968, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+95 percent confidence interval:
+ -9.999734e-01 -4.991502e-05
+sample estimates:
+difference in location 
+            -0.9999613 
+
+
+Descriptive Stats
+  Mean (procedural=0): 3.458 
+  Mean (procedural=1): 3.961 
+Mean Difference: 0.503 
+Cohen's d: -1.064 
+
+
+Analysis for: score_instructional_precision
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  score_instructional_precision by procedural
+W = 16766, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+95 percent confidence interval:
+ -0.9999445 -0.9999402
+sample estimates:
+difference in location 
+            -0.9999571 
+
+
+Descriptive Stats
+  Mean (procedural=0): 2.942 
+  Mean (procedural=1): 3.55 
+Mean Difference: 0.608 
+Cohen's d: -1.002 
+
+
+Analysis for: score_emergence
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  score_emergence by procedural
+W = 24681, p-value = 1.063e-08
+alternative hypothesis: true location shift is not equal to 0
+95 percent confidence interval:
+ -2.539007e-05 -2.508539e-05
+sample estimates:
+difference in location 
+         -2.962837e-05 
+
+
+Descriptive Stats
+  Mean (procedural=0): 2.914 
+  Mean (procedural=1): 3.256 
+Mean Difference: 0.342 
+Cohen's d: -0.551 
+
+
+Analysis for: score_structural_coherence
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  score_structural_coherence by procedural
+W = 41737, p-value = 5.921e-11
+alternative hypothesis: true location shift is not equal to 0
+95 percent confidence interval:
+ 8.359747e-07 3.996301e-05
+sample estimates:
+difference in location 
+          4.830841e-05 
+
+
+Descriptive Stats
+  Mean (procedural=0): 4.692 
+  Mean (procedural=1): 4.3 
+Mean Difference: -0.392 
+Cohen's d: 0.576 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Judge Validation - magical spell scripting
+
+Paired Wilcoxon Signed-Rank Test Results
+
+Outcome Variable: score_creative_alignment 
+test statistic: 147 
+p-value: 0.0005844 
+
+Outcome Variable: score_instructional_precision 
+test statistic: 166 
+p-value: 0.0003715 
+
+Outcome Variable: score_emergence 
+test statistic: 271 
+p-value: < 1e-04 
+
+Outcome Variable: score_structural_coherence 
+test statistic: 195.5 
+p-value: 0.0005677 
+
+                   score_metric threshold  f1_score
+1      score_creative_alignment       2.5 0.7741935
+2 score_instructional_precision       2.5 0.8085106
+3               score_emergence       2.5 0.8979592
+4    score_structural_coherence       3.5 0.8000000
+
+Metric: score_creative_alignment 
+  Spearman's rho: 0.698 
+  Weighted Kappa: 0.566 
+  ICC (Agreement): 0.571 
+  ICC (Consistency): 0.594 
+
+Metric: score_instructional_precision 
+  Spearman's rho: 0.677 
+  Weighted Kappa: 0.566 
+  ICC (Agreement): 0.571 
+  ICC (Consistency): 0.567 
+
+Metric: score_emergence 
+  Spearman's rho: 0.677 
+  Weighted Kappa: 0.641 
+  ICC (Agreement): 0.646 
+  ICC (Consistency): 0.647 
+
+Metric: score_structural_coherence 
+  Spearman's rho: 0.589 
+  Weighted Kappa: 0.559 
+  ICC (Agreement): 0.564 
+  ICC (Consistency): 0.573
+
+
+
+
+
+
+
+
+
+
+
+
+Judge Validation - cellular automata scripting
+
+Paired Wilcoxon Signed-Rank Test Results
+
+Outcome Variable: score_creative_alignment 
+test statistic: 91 
+p-value: 0.001308 
+
+Outcome Variable: score_instructional_precision 
+test statistic: 105 
+p-value: 0.0009515 
+
+Outcome Variable: score_emergence 
+test statistic: 66 
+p-value: 0.003337 
+
+Outcome Variable: score_structural_coherence 
+test statistic: 21 
+p-value: 0.03501 
+
+                   score_metric threshold  f1_score
+1      score_creative_alignment       2.5 0.8333333
+2 score_instructional_precision       2.5 0.9333333
+3               score_emergence       2.5 0.8000000
+4    score_structural_coherence       4.5 0.7692308
+
+Metric: score_creative_alignment 
+  Spearman's rho: 0.81 
+  Weighted Kappa: 0.738 
+  ICC (Agreement): 0.745 
+  ICC (Consistency): 0.738 
+
+Metric: score_instructional_precision 
+  Spearman's rho: 0.79 
+  Weighted Kappa: 0.746 
+  ICC (Agreement): 0.752 
+  ICC (Consistency): 0.755 
+
+Metric: score_emergence 
+  Spearman's rho: 0.762 
+  Weighted Kappa: 0.767 
+  ICC (Agreement): 0.773 
+  ICC (Consistency): 0.772 
+
+Metric: score_structural_coherence 
+  Spearman's rho: 0.36 
+  Weighted Kappa: 0.229 
+  ICC (Agreement): 0.235 
+  ICC (Consistency): 0.354 
+
+
+
+
+
+
+
+
+
+
+Testing Latency between factors
+
+[1] "Mean Latency by Factor"
+
+  model_name               mean_latency
+  <fct>                           <dbl>
+1 gemma-3-4b-it                    3.35
+2 gpt-4.1-mini                     5.41
+3 claude-sonnet-4-20250514         9.02
+4 gemini-2.5-flash                12.2 
+
+  shot_strategy mean_latency
+  <fct>                <dbl>
+1 fewshot               8.48
+2 oneshot               7.17
+3 zeroshot              6.71
+
+  planning mean_latency
+  <fct>           <dbl>
+1 0                7.21
+2 1                7.70
+
+Response: time
+                             Effect      df   MSE         F   ges p.value
+1                        model_name 3, 1116 45.20 97.19 ***  .207   <.001
+2                     shot_strategy 2, 1116 45.20  7.21 ***  .013   <.001
+3                          planning 1, 1116 45.20      1.52  .001    .218
+4          model_name:shot_strategy 6, 1116 45.20  7.40 ***  .038   <.001
+5               model_name:planning 3, 1116 45.20    3.01 *  .008    .029
+6            shot_strategy:planning 2, 1116 45.20      0.00 <.001    .996
+7 model_name:shot_strategy:planning 6, 1116 45.20      0.29  .002    .942
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘+’ 0.1 ‘ ’ 1
+
+[1] "Post-Hoc Test (Tukey's HSD for model)"
+
+NOTE: Results may be misleading due to involvement in interactions
+
+ contrast                                        estimate    SE   df t.ratio p.value
+ (gemma-3-4b-it) - (gpt-4.1-mini)                   -2.06 0.560 1116  -3.684  0.0014
+ (gemma-3-4b-it) - (claude-sonnet-4-20250514)       -5.68 0.560 1116 -10.132  <.0001
+ (gemma-3-4b-it) - (gemini-2.5-flash)               -8.85 0.560 1116 -15.795  <.0001
+ (gpt-4.1-mini) - (claude-sonnet-4-20250514)        -3.61 0.566 1116  -6.382  <.0001
+ (gpt-4.1-mini) - (gemini-2.5-flash)                -6.79 0.566 1116 -11.987  <.0001
+ (claude-sonnet-4-20250514) - (gemini-2.5-flash)    -3.17 0.566 1116  -5.605  <.0001
+
+
+
+
+
+
+
+
+Human Pilot vs LLM
+
+
+Spearman's Correlation for: creative_alignment 
+
+	Spearman's rank correlation rho
+
+data:  merged_data[[col_human]] and merged_data[[col_llm]]
+S = 24831, p-value = 0.002694
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.3747136 
+
+Spearman's Correlation for: instruction_following 
+
+	Spearman's rank correlation rho
+
+data:  merged_data[[col_human]] and merged_data[[col_llm]]
+S = 26168, p-value = 0.006678
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.3410352 
+
+Spearman's Correlation for: emergence 
+
+	Spearman's rank correlation rho
+
+data:  merged_data[[col_human]] and merged_data[[col_llm]]
+S = 33313, p-value = 0.2109
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.1611258
+
+Descriptive stats:
+Creative Alignment: Median 4, Mode 5
+Instruction Following: Median 4, Mode 5
+Emergence: Median 3, Mode 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,838 @@
+[automataScripting-2025-01-01-01-01-01]
+input::An inert element called "air"
+context::
+response::{
+  "name": "air",
+  "color_hex": "#FFFFFF",
+  "behavior": {
+    "actions": []
+  }
+}
+[end]
+[automataScripting-2025-01-01-01-01-02]
+input::A solid, stationary element called "wall"
+context::
+response::{
+  "name": "wall",
+  "color_hex": "#7A7B7A",
+  "behavior": {
+    "actions": []
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-03]
+input::An element called "water" that flows naturally
+context::existing elements: ["air"]
+response::{
+  "name": "water",
+  "color_hex": "#2684B6",
+  "behavior": {
+    "actions": [
+      {
+        "type": "in_rand_mirror",
+        "actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": [
+              "air"
+            ],
+            "actions": [
+              {
+                "type": "do_swap",
+                "direction": "south"
+              }
+            ],
+            "else_actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "east",
+                "options": [
+                  "air"
+                ],
+                "actions": [
+                  {
+                    "type": "do_swap",
+                    "direction": "east"
+                  }
+                ],
+                "else_actions": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-04]
+input::An element called "sand" that behaves like a powder, but stiffens under water
+context::existing elements: ["air", "water"]
+response::{
+  "name": "sand",
+  "color_hex": "#EDCE97",
+  "behavior": {
+    "actions": [
+      {
+        "type": "in_rand_mirror",
+        "actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": [
+              "air",
+              "water"
+            ],
+            "actions": [
+              {
+                "type": "do_swap",
+                "direction": "south"
+              }
+            ],
+            "else_actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "southeast",
+                "options": [
+                  "air"
+                ],
+                "actions": [
+                  {
+                    "type": "do_swap",
+                    "direction": "east"
+                  }
+                ],
+                "else_actions": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-05]
+input::An element called "plant" that grows downward with a random chance. It grows in the presence of water, and is flammable.
+context::existing elements: ["air", "water", "lava", "fire"]
+response::{
+  "name": "plant",
+  "color_hex": "#00AA00",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_alpha",
+        "target": "self",
+        "comparison": "greater_than",
+        "is": 99,
+        "actions": [
+          {
+            "type": "if_chance",
+            "percent": 50,
+            "actions": [
+              {
+                "type": "do_set_alpha",
+                "target": "self",
+                "operation": "set",
+                "to": 32
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "if_alpha",
+        "target": "self",
+        "comparison": "greater_than",
+        "is": 33,
+        "actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": ["air", "water"],
+            "actions": [
+              {
+                "type": "do_spawn",
+                "direction": "south",
+                "into_options": ["air", "water"],
+                "set_type": "plant"
+              },
+              {
+                "type": "do_copy_alpha",
+                "source_direction": "self",
+                "dest_direction": "south"
+              },
+              {
+                "type": "do_set_alpha",
+                "target": "south",
+                "operation": "subtract",
+                "to": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "if_neighbor_count",
+        "direction_set": [
+          "north", "northeast", "east", "southeast",
+          "south", "southwest", "west", "northwest"
+        ],
+        "options": ["water"],
+        "comparison": "greater_than",
+        "count": 0,
+        "actions": [
+          {
+            "type": "in_rand_rotation",
+            "actions": [
+              {
+                "type": "do_set_type",
+                "target": "east",
+                "to": "plant"
+              },
+              {
+                "type": "do_set_type",
+                "target": "south",
+                "to": "air"
+              }
+            ]
+          }
+        ],
+        "else_actions": [
+          {
+            "type": "if_neighbor_count",
+            "direction_set": [
+              "north", "northeast", "east", "southeast",
+              "south", "southwest", "west", "northwest"
+            ],
+            "options": ["fire", "lava"],
+            "comparison": "greater_than",
+            "count": 0,
+            "actions": [
+              {
+                "type": "do_set_type",
+                "target": "self",
+                "to": "fire"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-06]
+input::An element called "stone" that falls down but does not flow
+context::existing elements: ["air", "water", "lava"]
+response::{
+  "name": "stone",
+  "color_hex": "#AAAAAA",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_neighbor_is",
+        "direction": "south",
+        "options": ["air", "water", "lava"],
+        "actions": [
+          {
+            "type": "do_swap",
+            "direction": "south"
+          }
+        ],
+        "else_actions": []
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-07]
+input::An element called "fire" that behaves like a gas, with a short lifespan. It combusts other materials.
+context::existing elements: ["gas", "air", "wood", "plant", "seed"]
+response::{
+  "name": "fire",
+  "color_hex": "#FF9933",
+  "behavior": {
+    "actions": [
+      {
+        "type": "do_set_alpha",
+        "target": "self",
+        "operation": "add",
+        "to": -10
+      },
+      {
+        "type": "if_alpha",
+        "target": "self",
+        "comparison": "less_than",
+        "is": 1,
+        "actions": [
+          {
+            "type": "do_set_type",
+            "target": "self",
+            "to": "air"
+          }
+        ],
+        "else_actions": [
+          {
+            "type": "if_chance",
+            "percent": 50,
+            "actions": [
+              {
+                "type": "in_rand_rotation",
+                "actions": [
+                  {
+                    "type": "if_neighbor_is",
+                    "direction": "south",
+                    "options": ["air"],
+                    "actions": [
+                      {
+                        "type": "do_swap",
+                        "direction": "south"
+                      }
+                    ],
+                    "else_actions": [
+                      {
+                        "type": "if_neighbor_is",
+                        "direction": "south",
+                        "options": ["gas", "air", "wood", "plant", "seed"],
+                        "actions": [
+                          {
+                            "type": "do_set_type",
+                            "target": "south",
+                            "to": "fire"
+                          },
+                          {
+                            "type": "do_set_alpha",
+                            "target": "self",
+                            "operation": "set",
+                            "to": 50
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "if_neighbor_is",
+            "direction": "north",
+            "options": ["air"],
+            "actions": [
+              {
+                "type": "do_swap",
+                "direction": "north"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-08]
+input::An element called "ice" that freezes water. It can be melted too.
+context::existing elements: ["fire", "air", "water", "lava", "seed"]
+response::{
+  "name": "ice",
+  "color_hex": "#88F0FF",
+  "behavior": {
+    "actions": [
+      {
+        "type": "in_rand_rotation",
+        "actions": [
+          {
+            "type": "if_chance",
+            "percent": 10,
+            "actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "south",
+                "options": ["water"],
+                "actions": [
+                  {
+                    "type": "do_set_type",
+                    "target": "south",
+                    "to": "ice"
+                  },
+                  {
+                    "type": "do_set_alpha",
+                    "target": "south",
+                    "operation": "add",
+                    "to": 0
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "if_neighbor_count",
+            "direction_set": [
+              "north", "northeast", "east", "southeast",
+              "south", "southwest", "west", "northwest"
+            ],
+            "options": ["fire", "lava"],
+            "comparison": "greater_than",
+            "count": 0,
+            "actions": [
+              {
+                "type": "do_set_type",
+                "target": "self",
+                "to": "water"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-09]
+input::An element called "gas" that randomly diffuses into air.
+context::existing elements: ["air", "wood", "plant", "seed"]
+response::{
+  "name": "gas",
+  "color_hex": "#CCCCCC",
+  "behavior": {
+    "actions": [
+      {
+        "type": "in_rand_rotation",
+        "actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": ["air"],
+            "actions": [
+              {
+                "type": "do_swap",
+                "direction": "south"
+              }
+            ],
+            "else_actions": []
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-10]
+input::An element called "wood" that grows into thick trunks.
+context::existing elements: ["gas", "air", "wall", "sand"]
+response::{
+  "name": "wood",
+  "color_hex": "#A05200",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_alpha",
+        "target": "self",
+        "comparison": "greater_than",
+        "is": 30,
+        "actions": [
+          {
+            "type": "in_rand_rotation",
+            "actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "south",
+                "options": ["air"],
+                "actions": [
+                  {
+                    "type": "do_set_type",
+                    "target": "south",
+                    "to": "wood"
+                  },
+                  {
+                    "type": "do_copy_alpha",
+                    "source_direction": "self",
+                    "dest_direction": "south"
+                  },
+                  {
+                    "type": "do_set_alpha",
+                    "target": "south",
+                    "operation": "subtract",
+                    "to": 60
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-11]
+input::A viscous element called "lava" that flows slowly. It catches things on fire, and turns to stone in contact with water.
+context::existing elements: ["gas", "fire", "water", "stone", "wall", "air", "plant", "wood", "seed"]
+response::{
+  "name": "lava",
+  "color_hex": "#FF8000",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_chance",
+        "percent": 4.76,
+        "actions": [
+          {
+            "type": "do_set_alpha",
+            "target": "self",
+            "operation": "set",
+            "to": 100
+          }
+        ]
+      },
+      {
+        "type": "in_rand_rotation",
+        "actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": ["gas", "plant", "wood", "seed"],
+            "actions": [
+              {
+                "type": "do_set_type",
+                "target": "south",
+                "to": "fire"
+              }
+            ],
+            "else_actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "south",
+                "options": ["water"],
+                "actions": [
+                  {
+                    "type": "do_set_type",
+                    "target": "self",
+                    "to": "stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "if_neighbor_is",
+        "direction": "south",
+        "options": ["air"],
+        "actions": [
+          {
+            "type": "do_swap",
+            "direction": "south"
+          }
+        ],
+        "else_actions": [
+          {
+            "type": "if_chance",
+            "percent": 10,
+            "actions": [
+              {
+                "type": "in_rand_mirror",
+                "actions": [
+                  {
+                    "type": "if_neighbor_is",
+                    "direction": "east",
+                    "options": ["air"],
+                    "actions": [
+                      {
+                        "type": "do_swap",
+                        "direction": "east"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "if_chance",
+            "percent": 1,
+            "actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "north",
+                "options": ["air"],
+                "actions": [
+                  {
+                    "type": "do_set_type",
+                    "target": "north",
+                    "to": "fire"
+                  },
+                  {
+                    "type": "do_set_alpha",
+                    "target": "north",
+                    "operation": "set",
+                    "to": 30
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-12]
+input::A flammable explosive powder called "dust".
+context::existing elements: ["air", "water", "fire", "lava"]
+response::{
+  "name": "dust",
+  "color_hex": "#D986D9",
+  "behavior": {
+    "actions": [
+      {
+        "type": "in_rand_mirror",
+        "actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": ["air", "water"],
+            "actions": [
+              {
+                "type": "do_swap",
+                "direction": "south"
+              }
+            ],
+            "else_actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "southeast",
+                "options": ["air"],
+                "actions": [
+                  {
+                    "type": "do_swap",
+                    "direction": "southeast"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "if_neighbor_count",
+        "direction_set": [
+          "north", "northeast", "east", "southeast",
+          "south", "southwest", "west", "northwest"
+        ],
+        "options": ["fire", "lava"],
+        "comparison": "greater_than",
+        "count": 0,
+        "actions": [
+          {
+            "type": "in_rand_rotation",
+            "actions": [
+              {
+                "type": "do_set_type",
+                "target": "northeast",
+                "to": "fire"
+              },
+              {
+                "type": "do_set_type",
+                "target": "east",
+                "to": "fire"
+              }
+            ]
+          },
+          {
+            "type": "do_set_type",
+            "target": "self",
+            "to": "fire"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-13]
+input::A small seed that falls down, sprouting a "stem" when it lands on fertile ground.
+context::existing elements: ["air", "water", "sand", "plant", "wood", "wall", "seed", "stem"]
+response::{
+  "name": "seed",
+  "color_hex": "#44CC44",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_neighbor_is",
+        "direction": "south",
+        "options": ["air", "water"],
+        "actions": [
+          {
+            "type": "do_swap",
+            "direction": "south"
+          }
+        ],
+        "else_actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": ["sand", "plant", "wood", "wall", "seed"],
+            "actions": [
+              {
+                "type": "do_set_alpha",
+                "target": "self",
+                "operation": "set",
+                "to": 10
+              },
+              {
+                "type": "do_set_type",
+                "target": "self",
+                "to": "stem"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-14]
+input::An element called "stem" that grows upward for a short time, avoiding overcrowding. It spawns "petal" when it reaches the end of its growth.
+context::existing elements: ["air", "water", "sand", "plant", "wood", "wall", "seed", "petal"]
+response::{
+  "name": "stem",
+  "color_hex": "#229933",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_alpha",
+        "target": "self",
+        "comparison": "greater_than",
+        "is": 10,
+        "actions": [
+          {
+            "type": "in_rand_mirror",
+            "actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "northeast",
+                "options": ["air"],
+                "actions": [
+                  {
+                    "type": "if_neighbor_is",
+                    "direction": "northwest",
+                    "options": ["air"],
+                    "actions": [
+                      {
+                        "type": "do_spawn",
+                        "direction": "northeast",
+                        "into_options": ["air"],
+                        "set_type": "stem"
+                      },
+                      {
+                        "type": "do_copy_alpha",
+                        "source_direction": "self",
+                        "dest_direction": "northeast"
+                      },
+                      {
+                        "type": "do_set_alpha",
+                        "target": "northeast",
+                        "operation": "subtract",
+                        "to": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "if_chance",
+        "percent": 10,
+        "actions": [
+          {
+            "type": "if_alpha",
+            "target": "self",
+            "comparison": "less_than",
+            "is": 11,
+            "actions": [
+              {
+                "type": "do_set_type",
+                "target": "self",
+                "to": "petal"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+[end]
+[automataScripting-2025-01-01-01-01-15]
+input::An element called "petal". It grows into all directions for a few cells.
+context::existing elements: ["air", "wall", "water"]
+response::{
+  "name": "petal",
+  "color_hex": "#FFFF55",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_alpha",
+        "target": "self",
+        "comparison": "greater_than",
+        "is": 33,
+        "actions": [
+          {
+            "type": "in_rand_rotation",
+            "actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "south",
+                "options": ["air"],
+                "actions": [
+                  {
+                    "type": "do_set_type",
+                    "target": "south",
+                    "to": "petal"
+                  },
+                  {
+                    "type": "do_copy_alpha",
+                    "source_direction": "self",
+                    "dest_direction": "south"
+                  },
+                  {
+                    "type": "do_set_alpha",
+                    "target": "south",
+                    "operation": "subtract",
+                    "to": 25
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+
+

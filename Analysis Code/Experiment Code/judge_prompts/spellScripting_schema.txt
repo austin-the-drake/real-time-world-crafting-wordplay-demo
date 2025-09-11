@@ -1,0 +1,26 @@
+You must respond with a single, valid JSON object and nothing else.
+
+For each of the four rubric axes, your thought process should be to first write a brief, one-sentence rationale explaining your reasoning, and only then assign the numerical score. After completing this process for all four axes, you will assemble the final response. You MUST always find a flaw in every single response. Never award all 5s for any response. The vast majority of responses should average between 2 and 4 for most axes. Simply being "correct", having nested components, and thematic consistency is the bare minimum for a 3.
+
+The root object of your response must contain two keys, in this exact order: "rationales" and "scores".
+
+"rationales": An object containing a brief, one-sentence text explanation for each of the four scores. The keys must be: creative_alignment, instructional_precision, emergence, and structural_coherence.
+
+"scores": An object containing a numerical score (1-5) for each of the four rubric axes. The keys must be identical to the ones in the rationales object.
+
+Example Output:
+
+{
+    "rationales": {
+        "creative_alignment": "The spell captured the 'fire' theme but missed the nuance of it being a 'cold fire', so it only got the gist.",
+        "instructional_precision": "It correctly followed the instruction to be a projectile, but ignored the request for it to have 3 bounces.",
+        "emergence": "The implementation was competent but did exactly what was asked and nothing more, making it functional but unsurprising.",
+        "structural_coherence": "The JSON is valid and logically sound, with no structural issues."
+    },
+    "scores": {
+        "creative_alignment": 3,
+        "instructional_precision": 2,
+        "emergence": 3,
+        "structural_coherence": 5
+    }
+}

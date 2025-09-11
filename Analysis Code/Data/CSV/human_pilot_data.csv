@@ -1,0 +1,1327 @@
+﻿input,context,output,task,Passed,creative_alignment,instruction_following,emergence
+a plane drops a bomb,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""friendlyName"": ""Bomber Drop"",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 10,
+      ""speed"": 12,
+      ""gravity"": 0.1
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""neutral""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [192, 192, 192]
+    },
+    {
+      ""componentType"": ""spawnAngle"",
+      ""angle"": 270
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 18
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""reps"": 1,
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 128
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""fire""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [255, 140, 30]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,2,1,1
+a pointy heavy carrot drops onto the enemys head and explodes.,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""friendlyName"": ""Carrot Dropper"",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 4,
+      ""speed"": 13,
+      ""gravity"": 0.45
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""earth""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [255, 130, 30]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 16
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""reps"": 1,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 80
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""earth""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [255, 150, 30]
+        },
+        {
+          ""componentType"": ""deathTrigger"",
+          ""payload_components"": [
+            {
+              ""componentType"": ""manifestation"",
+              ""radius"": 7,
+              ""material_properties"": {
+                ""class"": ""solid"",
+                ""color_rgb"": [255, 130, 30],
+                ""blockpath"": true,
+                ""density"": 2,
+                ""elements"": [""earth""],
+                ""lifespan"": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,4,3,5
+A spiky cactus with sharp spines that stick onto enemys,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]",Model failed to produce an output,spellScripting,0,1,1,1
+A machine gun that knocks back any enemy it touches,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""friendlyName"": ""Bulwark Barrage"",
+  ""count"": 5,
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 3,
+      ""speed"": 18,
+      ""gravity"": 0.2
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""neutral""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [150, 150, 170]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 14
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""reps"": 1,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 100
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""neutral""
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,5,4,3
+a bull stampedes through the enemys and knocks them off the ledge,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""friendlyName"": ""Rampaging Bull Charge"",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 14,
+      ""speed"": 17,
+      ""gravity"": 0.3
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""earth""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [140, 90, 30]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 22
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""reps"": 1,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 128
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""earth""
+        },
+        {
+          ""componentType"": ""wallCrawl"",
+          ""radius"": 8,
+          ""speed"": 20
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""earth""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [120, 80, 20]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,3,3,2
+a bomb that explodes and releases pink roses that have sharp thorns that hurt,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""friendlyName"": ""Rose Bomb Burst"",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 8,
+      ""speed"": 14,
+      ""gravity"": 0.25
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""plant""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [230, 70, 160]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 14
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""replace"": true,
+      ""reps"": 1,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 80
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""plant""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [255, 100, 180]
+        },
+        {
+          ""componentType"": ""deathTrigger"",
+          ""count"": 6,
+          ""payload_components"": [
+            {
+              ""componentType"": ""manifestation"",
+              ""radius"": 3,
+              ""material_properties"": {
+                ""class"": ""powder"",
+                ""color_rgb"": [245, 110, 200],
+                ""blockpath"": false,
+                ""density"": 1,
+                ""elements"": [""plant""],
+                ""harmful"": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,5,5,3
+A super powerful laser beam that zaps people a lot,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]",Model failed to produce an output,spellScripting,0,1,1,1
+a pile of squirmy snakes that slither around and have venomous bites,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""friendlyName"": ""Venom Swarm"",
+  ""count"": 5,
+  ""components"": [
+    {
+      ""componentType"": ""wallCrawl"",
+      ""radius"": 7,
+      ""speed"": 10
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""poison""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [60, 135, 50]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 15
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""reps"": 1,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 120
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""poison""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [90, 200, 70]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,4,4,3
+Lots of ink from a pen,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The spell evokes the image of a pen releasing a large amount of ink, best represented by a projectile shaped like a droplet of ink. Upon impact, the ink should spread, so an impactTrigger will manifest a pool of liquid, black-colored ink. The neutral element fits an inert ink, and the manifestation will have a moderate radius and density to feel substantial but not harmful."",""friendlyName"":""Ink Burst Pen"",""count"":1,""components"":[{""componentType"":""projectile"",""radius"":3,""speed"":14,""gravity"":0.2},{""componentType"":""element"",""element"":""neutral""},{""componentType"":""color"",""rgb"":[20,20,28]},{""componentType"":""manaCost"",""cost"":5},{""componentType"":""impactTrigger"",""replace"":true,""payload_components"":[{""componentType"":""manifestation"",""radius"":8,""material_properties"":{""class"":""liquid"",""color_rgb"":[20,20,28],""blockpath"":false,""density"":1,""elements"":[""neutral""],""lifespan"":8}}]}]}",spellScripting,1,5,5,4
+Grow a tree and chop it down,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""To reflect growing a tree and chopping it down, I'll first use an aoe that represents a fast-growing effect in a small area, instantly manifesting a solid, plant-element tree. To represent chopping, I will utilize a buttonTrigger, which upon activation replaces the tree with a log manifestation (neutral/plant) and may also trigger a small explosion for a dramatic 'chop'. The sub-spells must repeat elements and manifest concrete objects, leveraging the available triggers and material properties."",
+""friendlyName"":""Timber Growth Ritual"",
+""components"":[
+  {""componentType"":""aoe"",""radius"":120,""turns"":1},
+  {""componentType"":""element"",""element"":""plant""},
+  {""componentType"":""color"",""rgb"":[56,128,32]},
+  {""componentType"":""manaCost"",""cost"":24},
+  {""componentType"":""timerTrigger"",""secs"":0.25,""payload_components"":[
+    {""componentType"":""manifestation"",""radius"":6,""material_properties"":{
+      ""class"":""solid"",
+      ""color_rgb"":[66,46,24],
+      ""blockpath"":true,
+      ""density"":2,
+      ""elements"":[""plant"",""earth""],
+      ""lifespan"":60
+    }}
+  ]},
+  {""componentType"":""buttonTrigger"",""replace"":true,""payload_components"":[
+    {""componentType"":""explosion"",""radius"":68},
+    {""componentType"":""element"",""element"":""plant""},
+    {""componentType"":""color"",""rgb"":[150,70,24]},
+    {""componentType"":""manifestation"",""radius"":5,""material_properties"":{
+      ""class"":""solid"",
+      ""color_rgb"":[150,90,54],
+      ""blockpath"":true,
+      ""density"":2,
+      ""elements"":[""plant"",""neutral""],
+      ""lifespan"":30
+    }}
+  ]}
+]}",spellScripting,1,2,1,3
+A canon ball with a rainbow trail behind it,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The spell should function as a heavy projectile (the cannon ball) with visible weight, suggesting a projectile component with gravity. The rainbow trail requires spawning multiple colorful manifestations along its path, best achieved with a timerTrigger that repeatedly creates short-lived, multi-colored powder manifestations as the projectile flies. Impact is straightforward and doesn't need a special effect beyond the impactful, hefty projectile itself, so focus remains on the trail."",""friendlyName"":""Rainbow Shot Cannonball"",""count"":1,""components"":[
+{""componentType"":""projectile"",""radius"":8,""speed"":18,""bounces"":1,""gravity"":0.35},
+{""componentType"":""element"",""element"":""earth""},
+{""componentType"":""color"",""rgb"":[100,100,100]},
+{""componentType"":""timerTrigger"",""secs"":0.08,""loop"":false,""reps"":8,""payload_components"":[
+    {""componentType"":""manifestation"",""radius"":2,""material_properties"":{""class"":""powder"",""color_rgb"":[255,0,0],""blockpath"":false,""density"":1,""elements"":[""fire""],""lifespan"":1}},
+    {""componentType"":""manifestation"",""radius"":2,""material_properties"":{""class"":""powder"",""color_rgb"":[255,128,0],""blockpath"":false,""density"":1,""elements"":[""earth""],""lifespan"":1}},
+    {""componentType"":""manifestation"",""radius"":2,""material_properties"":{""class"":""powder"",""color_rgb"":[255,255,0],""blockpath"":false,""density"":1,""elements"":[""electric""],""lifespan"":1}},
+    {""componentType"":""manifestation"",""radius"":2,""material_properties"":{""class"":""powder"",""color_rgb"":[0,255,0],""blockpath"":false,""density"":1,""elements"":[""plant""],""lifespan"":1}},
+    {""componentType"":""manifestation"",""radius"":2,""material_properties"":{""class"":""powder"",""color_rgb"":[0,128,255],""blockpath"":false,""density"":1,""elements"":[""water""],""lifespan"":1}},
+    {""componentType"":""manifestation"",""radius"":2,""material_properties"":{""class"":""powder"",""color_rgb"":[128,0,255],""blockpath"":false,""density"":1,""elements"":[""poison""],""lifespan"":1}}
+]}]}",spellScripting,1,1,1,3
+A thousand small knives,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The concept of 'a thousand small knives' suggests a large number of fast, small projectiles. To create a dramatic effect while remaining playable, the spell will use the count property at the top level (e.g., 20), each representing a knife. Each projectile will be small, quick, and neutral in element. Impact triggers will create a brief manifestation of a sharp, metallic material, leaving a fleeting mark for both visual feedback and flavor. The color and manifestation properties will evoke the image of flying steel blades."",""friendlyName"":""Thousand Knife Storm"",""count"":20,""components"":[{""componentType"":""projectile"",""radius"":2,""speed"":17,""gravity"":0.08},{""componentType"":""element"",""element"":""neutral""},{""componentType"":""color"",""rgb"":[210,210,210]},{""componentType"":""impactTrigger"",""replace"":false,""reps"":1,""payload_components"":[{""componentType"":""manifestation"",""radius"":1,""material_properties"":{""class"":""solid"",""color_rgb"":[180,180,180],""blockpath"":false,""density"":2,""elements"":[""neutral""],""lifespan"":0.7}}]}]}
+---END_SECTION---
+[spellScripting-2025-7-19-9-18-7]
+input::a torrential downpour that floods the battlefield in a ton of water
+context::[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]
+response::{""planning"":""To represent a torrential downpour flooding the battlefield, I will use an aoe component with a large radius and several turns to simulate sustained rain across the area. A timerTrigger will repeatedly manifest water in the area throughout the duration to create the sense of continuous flooding. The manifestations will be liquid, unblocking path, and water-aligned, persisting for a significant time to represent pooling water and the battlefield's transformation."",
+""friendlyName"":""Deluge Flood"",
+""count"":1,
+""components"":[
+  {""componentType"":""aoe"",""radius"":240,""turns"":6},
+  {""componentType"":""element"",""element"":""water""},
+  {""componentType"":""color"",""rgb"":[60,110,255]},
+  {""componentType"":""manaCost"",""cost"":32},
+  {""componentType"":""timerTrigger"",""secs"":1.0,""loop"":true,""reps"":6,""payload_components"":[
+    {""componentType"":""manifestation"",""radius"":14,""material_properties"":{""class"":""liquid"",""color_rgb"":[60,130,230],""blockpath"":false,""density"":1,""elements"":[""water""],""lifespan"":32}}
+  ]}
+]}",spellScripting,1,4,4,4
+A really large fireball which splits into two in mid air,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The central concept is a huge fireball, suggesting a large projectile as the main spell class. The splitting aspect requires a timerTrigger, set to activate after a short time mid-flight; its payload is to spawn two new fireball projectiles, each smaller. All projectiles and effects should have the fire element, and the main projectile should have an impactful visual color. To finish with flair, on death, each split fireball manifests an explosion of fire for maximum destruction."",""friendlyName"":""Twin Pyreburst"",""count"":1,""components"":[
+{""componentType"":""projectile"",""radius"":16,""speed"":17,""gravity"":0.18},
+{""componentType"":""element"",""element"":""fire""},
+{""componentType"":""color"",""rgb"":[255,96,32]},
+{""componentType"":""manaCost"",""cost"":24},
+{""componentType"":""timerTrigger"",""secs"":0.7,""replace"":true,""payload_components"":[
+  {""componentType"":""projectile"",""radius"":10,""speed"":15,""gravity"":0.18},
+  {""componentType"":""element"",""element"":""fire""},
+  {""componentType"":""color"",""rgb"":[255,120,32]},
+  {""componentType"":""spawnAngle"",""angle"":15},
+  {""componentType"":""deathTrigger"",""payload_components"":[
+    {""componentType"":""explosion"",""radius"":128},
+    {""componentType"":""element"",""element"":""fire""},
+    {""componentType"":""color"",""rgb"":[255,120,32]}
+  ]}
+,
+  {""componentType"":""projectile"",""radius"":10,""speed"":15,""gravity"":0.18},
+  {""componentType"":""element"",""element"":""fire""},
+  {""componentType"":""color"",""rgb"":[255,120,32]},
+  {""componentType"":""spawnAngle"",""angle"":-15},
+  {""componentType"":""deathTrigger"",""payload_components"":[
+    {""componentType"":""explosion"",""radius"":128},
+    {""componentType"":""element"",""element"":""fire""},
+    {""componentType"":""color"",""rgb"":[255,120,32]}
+  ]}
+]}
+]}",spellScripting,1,3,2,2
+An ice beam which freezes the opponent,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""An ice beam is best depicted as a long, persistent area-of-effect, so the primary component should be aoe with a linear radius covering the path of the beam. To achieve a 'freezing' effect on the opponent, a timerTrigger with repeating manifestations of an ice-solid, harmful material can simulate accumulating cold, while the ice element is used for both visual and mechanical clarity. The color component should be a light blue to convey cold, and a mana cost is added to balance the spell's potent control effect."",""friendlyName"":""Glacial Ray"",""count"":1,""components"":[{""componentType"":""aoe"",""radius"":220,""turns"":3},{""componentType"":""element"",""element"":""ice""},{""componentType"":""color"",""rgb"":[120,190,255]},{""componentType"":""manaCost"",""cost"":26},{""componentType"":""timerTrigger"",""secs"":0.8,""loop"":true,""reps"":3,""payload_components"":[{""componentType"":""manifestation"",""radius"":6,""material_properties"":{""class"":""solid"",""color_rgb"":[165,225,255],""blockpath"":false,""density"":1,""elements"":[""ice""],""harmful"":true,""lifespan"":2}}]}]}",spellScripting,1,4,3,3
+A spell which removes dirt,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The main concept is removal of dirt, which is best represented as an Area of Effect (aoe) that cleanses terrain in a given radius. The earth element should be included for thematic relevance. The actual removal will be achieved via a manifestation of a neutral, air-like gas with a short lifespan to simulate a cleansing burst that physically displaces soil or debris, ensuring the affected area is quickly cleared but not left harmful."",
+""friendlyName"":""Dirt Cleanser Field"",
+""components"":[
+  {""componentType"":""aoe"",""radius"":160,""turns"":2},
+  {""componentType"":""element"",""element"":""earth""},
+  {""componentType"":""color"",""rgb"":[210,185,140]},
+  {""componentType"":""manaCost"",""cost"":15},
+  {""componentType"":""deathTrigger"",""payload_components"":[
+    {""componentType"":""manifestation"",""radius"":10,
+      ""material_properties"":{
+        ""class"":""gas"",
+        ""color_rgb"":[235,235,230],
+        ""blockpath"":false,
+        ""density"":0.5,
+        ""elements"":[""neutral"",""wind""],
+        ""lifespan"":0.7
+      }
+    }
+  ]}
+]}",spellScripting,1,3,2,2
+holy hand grenade,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The 'holy hand grenade' should be represented as a thrown, heavy projectile, likely with some gravity, that explodes impressively on contact. The explosion ought to manifest a burst of holy energy, which, in this context, translates to a healing payload for allies (through the healing element) and a possible damaging, purifying effect against enemies (fire element). Using an impactTrigger ensures an explosive burst on contact, with the explosion visualized as both fire and healing energy."",""friendlyName"":""Sanctified Burst Orb"",""count"":1,""components"":[
+{""componentType"":""projectile"",""radius"":7,""speed"":13,""bounces"":0,""gravity"":0.3},
+{""componentType"":""element"",""element"":""fire""},
+{""componentType"":""element"",""element"":""healing""},
+{""componentType"":""color"",""rgb"":[255,250,128]},
+{""componentType"":""manaCost"",""cost"":17},
+{""componentType"":""impactTrigger"",""replace"":true,""payload_components"":[
+    {""componentType"":""explosion"",""radius"":128},
+    {""componentType"":""element"",""element"":""fire""},
+    {""componentType"":""element"",""element"":""healing""},
+    {""componentType"":""color"",""rgb"":[255,255,200]},
+    {""componentType"":""deathTrigger"",""payload_components"":[
+        {""componentType"":""manifestation"",""radius"":7,""material_properties"":{""class"":""powder"",""color_rgb"":[255,255,180],""blockpath"":false,""density"":1,""elements"":[""healing""],""harmful"":false,""lifespan"":2}}
+    ]},
+    {""componentType"":""timerTrigger"",""secs"":0.1,""payload_components"":[
+        {""componentType"":""buffCaster"",""heal"":25,""resist"":""poison""}
+    ]}
+]}]}",spellScripting,1,2,2,2
+Wood which expands vertically when touched by water,"{""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""fire"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":16.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""pyrolava"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""to"":""stone"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""into_options"":[""air""],""set_type"":""fire"",""type"":""do_spawn"",""set_alpha"":60.0}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":10.0},{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_chance"",""percent"":12.0},{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_chance"",""percent"":4.0}]}}","{""planning"":""To fulfill the wood's special expansion, I'll check if water is adjacent. If so, the wood will try to grow by converting air (or gas) above and below into wood. I'll prioritize upward expansion, but allow downward too for vertical growth. Otherwise, wood will remain static and have no other interactions for now."",""name"":""wood"",""color_hex"":""#8B5A2B"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""options"":[""water""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""wood""}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_set_type"",""target"":""south"",""to"":""wood""}]}]}]}}",automataScripting,1,5,5,4
+Leaves,"{""wood"":{""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}]}]},""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""fire"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":16.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""pyrolava"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""to"":""stone"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""into_options"":[""air""],""set_type"":""fire"",""type"":""do_spawn"",""set_alpha"":60.0}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":10.0},{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_chance"",""percent"":12.0},{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_chance"",""percent"":4.0}]}}","{""planning"":""Leaves should act as lightweight, flammable plant matter. I will implement fluttery, slow-random drifting movement by allowing motion in random directions with some probability, but predominantly letting them settle or accumulate. Leaves will be highly flammable, burning readily when near fire or pyrolava, and gradually fading away when isolated to simulate decomposition. I will use the alpha value for lifespan, and use behavioral nodes for movement, burning, and decaying."",""name"":""leaves"",""color_hex"":""#88BB44"",""behavior"":{""actions"":[{""type"":""do_set_alpha"",""target"":""self"",""operation"":""subtract"",""to"":2},{""type"":""if_alpha"",""target"":""self"",""comparison"":""less_than"",""is"":1,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""air""}]},{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""fire""},{""type"":""do_set_alpha"",""target"":""self"",""operation"":""set"",""to"":60}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""south""}],""else_actions"":[{""type"":""if_chance"",""percent"":25,""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""east""}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""west""}]}]}]}]}]},{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""type"":""if_chance"",""percent"":5,""actions"":[{""type"":""do_swap"",""direction"":""north""}]}]}]}}",automataScripting,1,2,3,4
+Update leaves to be stationary when touching wood,"{""wood"":{""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}]}]},""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""leaves"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":2.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""actions"":[{""to"":""fire"",""target"":""self"",""type"":""do_set_type""},{""operation"":""set"",""to"":60.0,""target"":""self"",""type"":""do_set_alpha""}]},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""else_actions"":[{""direction"":""west"",""options"":[""air"",""gas""],""actions"":[{""direction"":""west"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":25.0}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_chance"",""percent"":5.0}],""type"":""if_neighbor_is""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""fire"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":16.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""pyrolava"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""to"":""stone"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""into_options"":[""air""],""set_type"":""fire"",""type"":""do_spawn"",""set_alpha"":60.0}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":10.0},{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_chance"",""percent"":12.0},{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_chance"",""percent"":4.0}]}}","{""planning"":""To make leaves stationary when in contact with wood, I will first implement a neighbor check for wood in all eight directions. If wood is detected, leaves will skip all falling or movement actions. Otherwise, existing leaf behavior such as falling, burning, and air decay will continue. The rest of the structure will embed the current leaves logic as the 'else_actions' of the wood-detection block."",""name"":""leaves"",""color_hex"":""#3FB032"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""wood""],""comparison"":""greater_than"",""count"":0,""actions"":[],""else_actions"":[{""type"":""do_set_alpha"",""target"":""self"",""operation"":""subtract"",""to"":2},{""type"":""if_alpha"",""target"":""self"",""comparison"":""less_than"",""is"":1,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""air""}]},{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""fire""},{""type"":""do_set_alpha"",""target"":""self"",""operation"":""set"",""to"":60}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""south""}],""else_actions"":[{""type"":""if_chance"",""percent"":25,""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""east""}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""west""}]}]}]}]}]},{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""type"":""if_chance"",""percent"":5,""actions"":[{""type"":""do_swap"",""direction"":""north""}]}]}] }] } }",automataScripting,1,5,5,5
+"When wood is not growing, spawn leaves at the top of the wood","{""wood"":{""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}]}]},""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""leaves"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""wood""],""comparison"":""greater_than"",""actions"":[],""else_actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":2.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""actions"":[{""to"":""fire"",""target"":""self"",""type"":""do_set_type""},{""operation"":""set"",""to"":60.0,""target"":""self"",""type"":""do_set_alpha""}]},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""else_actions"":[{""direction"":""west"",""options"":[""air"",""gas""],""actions"":[{""direction"":""west"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":25.0}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_chance"",""percent"":5.0}],""type"":""if_neighbor_is""}]}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""fire"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":16.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""pyrolava"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""to"":""stone"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""into_options"":[""air""],""set_type"":""fire"",""type"":""do_spawn"",""set_alpha"":60.0}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":10.0},{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_chance"",""percent"":12.0},{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_chance"",""percent"":4.0}]}}","{""planning"":""To represent wood growing leaves at its top when not actively growing, I'll focus on cells of wood with empty space above and no growth-inducing neighbor (such as water). I'll use if_neighbor_is and if_neighbor_count to check for water and air above. If these conditions are met, I will spawn a leaves cell directly north. This update will be added to the existing wood behavior in a way that preserves prior logic."",""name"":""wood"",""color_hex"":""#c69044"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""options"":[""water""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""wood""}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_set_type"",""target"":""south"",""to"":""wood""}]}]},{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""options"":[""water""],""comparison"":""equal_to"",""count"":0,""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air"",""gas""],""set_type"":""leaves""}]}]}]}}",automataScripting,1,5,4,4
+Update fire to burn wood and leaves,"{""wood"":{""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}]},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""equal_to"",""actions"":[{""direction"":""north"",""into_options"":[""air"",""gas""],""set_type"":""leaves"",""type"":""do_spawn""}]}],""type"":""if_neighbor_is""}]},""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""leaves"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""wood""],""comparison"":""greater_than"",""actions"":[],""else_actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":2.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""actions"":[{""to"":""fire"",""target"":""self"",""type"":""do_set_type""},{""operation"":""set"",""to"":60.0,""target"":""self"",""type"":""do_set_alpha""}]},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""else_actions"":[{""direction"":""west"",""options"":[""air"",""gas""],""actions"":[{""direction"":""west"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":25.0}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_chance"",""percent"":5.0}],""type"":""if_neighbor_is""}]}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""fire"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":16.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""pyrolava"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""to"":""stone"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""into_options"":[""air""],""set_type"":""fire"",""type"":""do_spawn"",""set_alpha"":60.0}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":10.0},{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_chance"",""percent"":12.0},{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_chance"",""percent"":4.0}]}}","{""planning"":""To enhance burning behavior, I will update fire to actively seek out both wood and leaves in adjacent cells. Upon detecting either, fire will transform the affected neighbor into fire as well, maintaining a fast spread. The effect will be placed in a randomized orientation pass for equal likelihood of burning each direction. The lifespan and movement behaviors of fire remain unchanged."",""name"":""fire"",""color_hex"":""#FF9933"",""behavior"":{""actions"":[{""type"":""do_set_alpha"",""target"":""self"",""operation"":""subtract"",""to"":16},{""type"":""if_alpha"",""target"":""self"",""comparison"":""less_than"",""is"":1,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""air""}]},{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air""],""actions"":[{""type"":""do_swap"",""direction"":""north""}]},{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""sand""],""actions"":[{""type"":""do_set_type"",""target"":""east"",""to"":""fire""}]},{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""sand""],""actions"":[{""type"":""do_set_type"",""target"":""west"",""to"":""fire""}]},{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""wood"",""leaves""],""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""fire""}]},{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""wood"",""leaves""],""actions"":[{""type"":""do_set_type"",""target"":""east"",""to"":""fire""}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""wood"",""leaves""],""actions"":[{""type"":""do_set_type"",""target"":""south"",""to"":""fire""}]},{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""wood"",""leaves""],""actions"":[{""type"":""do_set_type"",""target"":""west"",""to"":""fire""}]}]}]}}",automataScripting,1,5,5,5
+Update gas to disappear when touched by fire,"{""wood"":{""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}]},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""equal_to"",""actions"":[{""direction"":""north"",""into_options"":[""air"",""gas""],""set_type"":""leaves"",""type"":""do_spawn""}]}],""type"":""if_neighbor_is""}]},""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""leaves"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""wood""],""comparison"":""greater_than"",""actions"":[],""else_actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":2.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""actions"":[{""to"":""fire"",""target"":""self"",""type"":""do_set_type""},{""operation"":""set"",""value_index"":1.0,""to"":60.0,""target"":""self"",""type"":""do_set_alpha""}]},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""else_actions"":[{""direction"":""west"",""options"":[""air"",""gas""],""actions"":[{""direction"":""west"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":25.0}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_chance"",""percent"":5.0}],""type"":""if_neighbor_is""}]}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""fire"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":16.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""pyrolava"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""to"":""stone"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""into_options"":[""air""],""set_type"":""fire"",""type"":""do_spawn"",""set_alpha"":60.0}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":10.0},{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_chance"",""percent"":12.0},{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_chance"",""percent"":4.0}]}}","{""planning"":""To update gas so it disappears when touched by fire, I will check all neighboring directions for the presence of fire. If fire is detected in any adjacent cell, the gas will turn into air. The random movement behavior of gas should remain unaltered. I will add the fire check as a top priority so it occurs before movement."",""name"":""gas"",""color_hex"":""#DDFFE6"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""fire""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""air""}]},{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air""],""actions"":[{""type"":""do_swap"",""direction"":""north""}]}]}]}}",automataScripting,1,5,5,5
+Ice,"{""wood"":{""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""to"":""wood"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}]},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""direction_set"":[""north"",""south"",""east"",""west"",""northeast"",""northwest"",""southeast"",""southwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""equal_to"",""actions"":[{""direction"":""north"",""into_options"":[""air"",""gas""],""set_type"":""leaves"",""type"":""do_spawn""}]}],""type"":""if_neighbor_is""}]},""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""leaves"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""wood""],""comparison"":""greater_than"",""actions"":[],""else_actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":2.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""actions"":[{""to"":""fire"",""target"":""self"",""type"":""do_set_type""},{""operation"":""set"",""value_index"":1.0,""to"":60.0,""target"":""self"",""type"":""do_set_alpha""}]},{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""else_actions"":[{""direction"":""west"",""options"":[""air"",""gas""],""actions"":[{""direction"":""west"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":25.0}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_chance"",""percent"":5.0}],""type"":""if_neighbor_is""}]}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""fire""],""comparison"":""greater_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""fire"":{""actions"":[{""operation"":""subtract"",""value_index"":1.0,""to"":16.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""},{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""wood"",""leaves""],""actions"":[{""to"":""fire"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]},""pyrolava"":{""actions"":[{""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0,""type"":""if_neighbor_count"",""options"":[""water""],""comparison"":""greater_than"",""actions"":[{""to"":""stone"",""target"":""self"",""type"":""do_set_type""}]},{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""into_options"":[""air""],""set_type"":""fire"",""type"":""do_spawn"",""set_alpha"":60.0}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}],""type"":""if_chance"",""percent"":10.0},{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_chance"",""percent"":12.0},{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_chance"",""percent"":4.0}]}}","{""planning"":""To create ice, I will simulate its solidity and coldness, making it mostly immobile except when forced by gravity, and able to slowly melt into water over time based on its alpha value. If ice is adjacent to fire, pyrolava, or lava, it should melt more quickly. Standing water next to ice may freeze into more ice, simulating cold-spreading. Swapping downward will simulate ice slabs breaking off and sliding when unsupported."",""name"":""ice"",""color_hex"":""#66DDEE"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""fire"",""pyrolava""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""do_set_alpha"",""target"":""self"",""operation"":""subtract"",""to"":32}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""type"":""do_swap"",""direction"":""south""}]},{""type"":""if_chance"",""percent"":7,""actions"":[{""type"":""do_set_alpha"",""target"":""self"",""operation"":""subtract"",""to"":4}]},{""type"":""if_alpha"",""target"":""self"",""comparison"":""less_than"",""is"":2,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""water""}]},{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""water""],""actions"":[{""type"":""if_chance"",""percent"":10,""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""ice""},{""type"":""do_set_alpha"",""target"":""north"",""operation"":""set"",""to"":48}]}]},{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""water""],""actions"":[{""type"":""if_chance"",""percent"":6,""actions"":[{""type"":""do_set_type"",""target"":""east"",""to"":""ice""},{""type"":""do_set_alpha"",""target"":""east"",""operation"":""set"",""to"":40}]}]},{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""water""],""actions"":[{""type"":""if_chance"",""percent"":6,""actions"":[{""type"":""do_set_type"",""target"":""west"",""to"":""ice""},{""type"":""do_set_alpha"",""target"":""west"",""operation"":""set"",""to"":40}]}]}]}}",automataScripting,1,5,5,5
+cast lightning bolt on opponent,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The user wants a lightning bolt cast on an opponent, which is a classic direct damage spell. This is best represented as a fast projectile with the electric element. To make it feel like authentic lightning, I'll add some bounces to simulate the erratic nature of electrical discharge. The projectile should have minimal gravity since lightning travels in relatively straight lines through air."",""components"":[{""componentType"":""projectile"",""radius"":3,""speed"":25,""bounces"":2,""gravity"":0.1},{""componentType"":""element"",""element"":""electric""},{""componentType"":""color"",""rgb"":[200,200,255]},{""componentType"":""manaCost"",""cost"":15}],""friendlyName"":""Lightning Bolt""}",spellScripting,1,5,5,3
+drop cloud onto opponent from the sky,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The user wants to drop a cloud from the sky onto an opponent, which suggests an aerial projectile that descends with gravity. The cloud should manifest as a gaseous substance when it impacts. Since it's targeting an opponent, I'll use a poison element to make it harmful and add some electric element for visual effect."", ""friendlyName"":""Sky Drop Cloud"", ""count"":1, ""components"":[{""componentType"":""projectile"",""radius"":8,""speed"":12,""gravity"":0.4}, {""componentType"":""element"",""element"":""poison""}, {""componentType"":""color"",""rgb"":[120,80,150]}, {""componentType"":""spawnAngle"",""angle"":270}, {""componentType"":""manaCost"",""cost"":25}, {""componentType"":""impactTrigger"",""replace"":true,""payload_components"":[{""componentType"":""manifestation"",""radius"":6,""material_properties"":{""class"":""gas"",""color_rgb"":[120,80,150],""blockpath"":false,""density"":0.5,""elements"":[""poison"",""electric""],""harmful"":true,""lifespan"":8}}]}]}",spellScripting,1,5,2,5
+cast snake which slithers around map and bites opponents,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants a snake that slithers around the map and bites opponents. This is best represented as a wallCrawl component that moves along surfaces. The snake should seek enemies using homing behavior, and when it contacts an opponent (impactTrigger), it should deliver a poisonous bite effect through a manifestation of poison material."",
+  ""friendlyName"": ""Venomous Serpent"",
+  ""count"": 1,
+  ""components"": [
+    {
+      ""componentType"": ""wallCrawl"",
+      ""radius"": 8,
+      ""speed"": 12
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""poison""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [34, 139, 34]
+    },
+    {
+      ""componentType"": ""homing"",
+      ""strength"": 0.15
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 25
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""reps"": 3,
+      ""replace"": false,
+      ""payload_components"": [
+        {
+          ""componentType"": ""manifestation"",
+          ""radius"": 3,
+          ""material_properties"": {
+            ""class"": ""liquid"",
+            ""color_rgb"": [138, 43, 226],
+            ""blockpath"": false,
+            ""density"": 1,
+            ""elements"": [""poison""],
+            ""harmful"": true,
+            ""lifespan"": 5
+          }
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,2,3,1
+"Throw a playing card which targets the nearest enemy, and deals damage that scales with a random generated number","[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The spell is a thrown playing card that seeks enemies, best represented as a projectile with homing behavior. The random damage scaling suggests using a neutral element to represent the unpredictable nature. An impactTrigger with an explosion payload will deliver the variable damage effect upon hitting the target."",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 3,
+      ""speed"": 18,
+      ""gravity"": 0.1
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""neutral""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [220, 220, 240]
+    },
+    {
+      ""componentType"": ""homing"",
+      ""strength"": 0.3
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 15
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 64
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""neutral""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [255, 255, 255]
+        }
+      ]
+    }
+  ],
+  ""friendlyName"": ""Lucky Card""
+}",spellScripting,1,2,2,2
+Affect opponent with the giggles and take damage over time,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""This spell needs to apply a damage-over-time effect to an opponent, which suggests a projectile that delivers a poison-based DoT. The giggles aspect can be represented through a manifestation of a gas that spreads and causes harm over time. A timerTrigger with loop and reps will create the recurring damage effect, while the poison element fits thematically with both giggling madness and damage over time."",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 8,
+      ""speed"": 12,
+      ""gravity"": 0.1
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""poison""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [128, 255, 128]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 25
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""manifestation"",
+          ""radius"": 6,
+          ""material_properties"": {
+            ""class"": ""gas"",
+            ""color_rgb"": [200, 255, 200],
+            ""blockpath"": false,
+            ""density"": 0.5,
+            ""elements"": [""poison""],
+            ""harmful"": true,
+            ""lifespan"": 8
+          }
+        },
+        {
+          ""componentType"": ""timerTrigger"",
+          ""secs"": 1.5,
+          ""loop"": true,
+          ""reps"": 5,
+          ""payload_components"": [
+            {
+              ""componentType"": ""explosion"",
+              ""radius"": 64
+            },
+            {
+              ""componentType"": ""element"",
+              ""element"": ""poison""
+            },
+            {
+              ""componentType"": ""color"",
+              ""rgb"": [128, 255, 128]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  ""friendlyName"": ""Giggling Poison""
+}",spellScripting,1,4,4,3
+give me superman laser vision that burns,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants Superman's laser vision that burns, which requires a fast, precise projectile beam. The burning effect suggests fire element and a manifestation payload that creates harmful burning material on impact. A shield-like component isn't needed since this is an offensive ranged attack that should travel in a straight line at high speed."",
+  ""friendlyName"": ""Burning Laser Vision"",
+  ""count"": 1,
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 3,
+      ""speed"": 20,
+      ""gravity"": 0.0
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""fire""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [255, 0, 0]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 15
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""manifestation"",
+          ""radius"": 4,
+          ""material_properties"": {
+            ""class"": ""gas"",
+            ""color_rgb"": [255, 100, 0],
+            ""blockpath"": false,
+            ""density"": 1,
+            ""elements"": [""fire""],
+            ""harmful"": true,
+            ""lifespan"": 5
+          }
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,4,5,3
+Give me a random superhero power from the avengers,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The user wants a random Avengers superhero power. I'll create Captain America's shield throw - a projectile that bounces multiple times and returns to the caster like a boomerang. The shield should have substantial physical presence and create a satisfying metallic manifestation when it finally comes to rest. This captures the iconic shield mechanics from the comics and movies."",""friendlyName"":""Vibranium Shield"",""count"":1,""components"":[{""componentType"":""projectile"",""radius"":15,""speed"":18,""bounces"":3,""gravity"":0.1},{""componentType"":""element"",""element"":""neutral""},{""componentType"":""color"",""rgb"":[192,192,255]},{""componentType"":""boomerang"",""strength"":0.3},{""componentType"":""manaCost"",""cost"":25},{""componentType"":""deathTrigger"",""payload_components"":[{""componentType"":""manifestation"",""radius"":3,""material_properties"":{""class"":""solid"",""color_rgb"":[192,192,255],""blockpath"":true,""density"":2,""elements"":[""neutral""],""lifespan"":15}}]}]}",spellScripting,1,5,5,4
+Give me a panda sidekick that blocks all damage and bites all opponents on the map,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants a panda sidekick that provides two functions: blocking damage (defensive shield) and attacking all opponents (area of effect with harm). I'll create a shield spell that represents the protective panda, then use a timerTrigger with loop to continuously cast AOE attacks that manifest biting damage through poison manifestation."",
+  ""friendlyName"": ""Guardian Panda"",
+  ""components"": [
+    {
+      ""componentType"": ""shield"",
+      ""radius"": 150,
+      ""turns"": 10
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""plant""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [50, 50, 50]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 40
+    },
+    {
+      ""componentType"": ""timerTrigger"",
+      ""secs"": 1.5,
+      ""loop"": true,
+      ""reps"": 10,
+      ""payload_components"": [
+        {
+          ""componentType"": ""aoe"",
+          ""radius"": 300,
+          ""turns"": 1
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""poison""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [100, 200, 100]
+        },
+        {
+          ""componentType"": ""deathTrigger"",
+          ""payload_components"": [
+            {
+              ""componentType"": ""manifestation"",
+              ""radius"": 3,
+              ""material_properties"": {
+                ""class"": ""gas"",
+                ""color_rgb"": [150, 255, 150],
+                ""blockpath"": false,
+                ""density"": 1,
+                ""elements"": [""poison""],
+                ""harmful"": true,
+                ""lifespan"": 0.8
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,1,2,2
+bright blue thunderbolt strikes,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants bright blue thunderbolt strikes, which suggests a projectile with electric element and blue coloring. The plural 'strikes' implies multiple projectiles, so I'll use a count of 3. Each thunderbolt should have high speed and minimal gravity to feel like lightning, with an impactTrigger that creates an electric explosion on contact."",
+  ""friendlyName"": ""Azure Lightning Volley"",
+  ""count"": 3,
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 4,
+      ""speed"": 20,
+      ""gravity"": 0.1
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""electric""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [0, 150, 255]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 25
+    },
+    {
+      ""componentType"": ""spawnRandAngle""
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 96
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""electric""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [100, 200, 255]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,2,2,3
+"a cartoon bomb falls from the sky, and explodes fireworks","[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""This spell requires a cartoon bomb that falls from the sky, which is a projectile with gravity. The fireworks explosion on impact suggests an impactTrigger that replaces the bomb with an explosion, followed by a deathTrigger on the explosion to create multiple colorful projectiles that represent the fireworks bursting outward."",""components"":[{""componentType"":""projectile"",""radius"":8,""speed"":12,""gravity"":0.4},{""componentType"":""element"",""element"":""fire""},{""componentType"":""color"",""rgb"":[64,64,64]},{""componentType"":""manaCost"",""cost"":25},{""componentType"":""impactTrigger"",""replace"":true,""payload_components"":[{""componentType"":""explosion"",""radius"":128},{""componentType"":""element"",""element"":""fire""},{""componentType"":""color"",""rgb"":[255,128,0]},{""componentType"":""deathTrigger"",""count"":8,""payload_components"":[{""componentType"":""projectile"",""radius"":3,""speed"":18,""gravity"":0.3},{""componentType"":""element"",""element"":""electric""},{""componentType"":""color"",""rgb"":[255,255,128]},{""componentType"":""spawnRandAngle""},{""componentType"":""deathTrigger"",""payload_components"":[{""componentType"":""manifestation"",""radius"":2,""material_properties"":{""class"":""gas"",""color_rgb"":[255,200,100],""blockpath"":false,""density"":0.5,""elements"":[""fire""],""lifespan"":2}}]}]}]}],""friendlyName"":""Cartoon Fireworks Bomb""}",spellScripting,1,4,3,2
+green snakes that leave a residual poison inflicted on the foe,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The concept calls for green snakes, which are best represented as projectiles with a green color and poison element. The phrase 'leave a residual poison' suggests an impactTrigger that creates a manifestation of poisonous gas or liquid that persists and harms enemies. Using multiple snakes (count) would enhance the serpentine theme."",""friendlyName"":""Venomous Serpent Strike"",""count"":3,""components"":[{""componentType"":""projectile"",""radius"":4,""speed"":12,""gravity"":0.15},{""componentType"":""element"",""element"":""poison""},{""componentType"":""color"",""rgb"":[34,139,34]},{""componentType"":""manaCost"",""cost"":25},{""componentType"":""impactTrigger"",""replace"":true,""payload_components"":[{""componentType"":""manifestation"",""radius"":3,""material_properties"":{""class"":""gas"",""color_rgb"":[50,205,50],""blockpath"":false,""density"":0.5,""elements"":[""poison""],""harmful"":true,""lifespan"":8}}]}]}",spellScripting,1,1,1,1
+"a poltergeist that spooks the foe, causing them to jump","[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing"",""spooky""]","{""planning"":""The spell should be a mobile entity that can move around and interact with enemies, making wallCrawl a good primary component. Since it's a poltergeist that spooks foes causing them to jump, this suggests an impact-based effect that manifests something startling. The spooky element is perfect for this concept, and the manifestation should create a brief, harmless but visually striking effect."",""components"":[{""componentType"":""wallCrawl"",""radius"":8,""speed"":12},{""componentType"":""element"",""element"":""spooky""},{""componentType"":""color"",""rgb"":[128,0,128]},{""componentType"":""impactTrigger"",""reps"":3,""replace"":false,""payload_components"":[{""componentType"":""manifestation"",""radius"":3,""material_properties"":{""class"":""gas"",""color_rgb"":[200,200,255],""blockpath"":false,""density"":0.5,""elements"":[""spooky""],""lifespan"":2}}]}],""friendlyName"":""Mischievous Poltergeist""}",spellScripting,1,3,2,2
+summon a blizzard that freezes the foe,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing"",""spooky""]","{""planning"":""The user wants a blizzard that freezes foes, which is best represented as an area of effect spell with ice and wind elements. The blizzard should persist for several turns to create the freezing effect. I'll add a manifestation component triggered on a timer to create actual ice/snow accumulation, making the spell more visually and mechanically interesting with frozen terrain that could block movement."",""components"":[{""componentType"":""aoe"",""radius"":200,""turns"":8},{""componentType"":""element"",""element"":""ice""},{""componentType"":""element"",""element"":""wind""},{""componentType"":""color"",""rgb"":[200,230,255]},{""componentType"":""manaCost"",""cost"":35},{""componentType"":""timerTrigger"",""secs"":1.5,""loop"":true,""reps"":5,""payload_components"":[{""componentType"":""manifestation"",""radius"":6,""material_properties"":{""class"":""powder"",""color_rgb"":[240,248,255],""blockpath"":true,""density"":1,""elements"":[""ice""],""lifespan"":25}}]}],""friendlyName"":""Freezing Blizzard""}",spellScripting,1,3,4,2
+make my character larger and jump into the air in a way I can control their movement,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing"",""spooky""]","{
+  ""planning"": ""The user wants their character to become larger and jump with controllable movement. This suggests a buffCaster component to handle the size increase (represented as heal for empowerment), followed by a teleportCaster to launch into the air. The controllable movement aspect requires a projectile with controllable component that the player can guide while airborne."",
+  ""friendlyName"": ""Giant's Leap"",
+  ""components"": [
+    {
+      ""componentType"": ""buffCaster"",
+      ""heal"": 25
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""wind""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [150, 200, 255]
+    },
+    {
+      ""componentType"": ""timerTrigger"",
+      ""secs"": 0.2,
+      ""payload_components"": [
+        {
+          ""componentType"": ""projectile"",
+          ""radius"": 8,
+          ""speed"": 18,
+          ""gravity"": 0.15
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""wind""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [150, 200, 255]
+        },
+        {
+          ""componentType"": ""spawnAngle"",
+          ""angle"": 90
+        },
+        {
+          ""componentType"": ""controllable"",
+          ""mana_cost"": 0.5
+        },
+        {
+          ""componentType"": ""deathTrigger"",
+          ""payload_components"": [
+            {
+              ""componentType"": ""teleportCaster""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 35
+    }
+  ]
+}",spellScripting,1,1,1,1
+generate a tornado that I can control,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing"",""spooky""]","{
+  ""planning"": ""The user wants a controllable tornado, which maps perfectly to a wallCrawl component with controllable behavior since tornadoes move along surfaces and terrain. The tornado should have wind element and create a swirling manifestation effect. A buttonTrigger can be used to create the tornado's destructive vortex effect when activated."",
+  ""components"": [
+    {
+      ""componentType"": ""wallCrawl"",
+      ""radius"": 12,
+      ""speed"": 15
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""wind""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [200, 200, 220]
+    },
+    {
+      ""componentType"": ""controllable"",
+      ""mana_cost"": 0.2
+    },
+    {
+      ""componentType"": ""timerTrigger"",
+      ""secs"": 0.5,
+      ""loop"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""manifestation"",
+          ""radius"": 8,
+          ""material_properties"": {
+            ""class"": ""gas"",
+            ""color_rgb"": [180, 180, 200],
+            ""blockpath"": false,
+            ""density"": 0.5,
+            ""elements"": [""wind""],
+            ""lifespan"": 2
+          }
+        }
+      ]
+    },
+    {
+      ""componentType"": ""buttonTrigger"",
+      ""count"": 3,
+      ""payload_components"": [
+        {
+          ""componentType"": ""projectile"",
+          ""radius"": 4,
+          ""speed"": 20,
+          ""gravity"": 0.1
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""wind""
+        },
+        {
+          ""componentType"": ""spawnRandAngle""
+        },
+        {
+          ""componentType"": ""homing"",
+          ""strength"": 0.15
+        }
+      ]
+    }
+  ],
+  ""friendlyName"": ""Controllable Tornado""
+}",spellScripting,1,4,4,3
+A new material called lava. It melts sand. It also turns water into gas when touching it,"{""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]}}","{""planning"":""To simulate lava's interactions, I will have it check all directions for water to convert it into gas, and for sand to convert it into gas as well, representing melting. Lava will move slowly downward, favoring spread when possible, and will prioritize executing its transformative interactions before moving. Randomized horizontal movement helps mimic its viscous, unpredictable flow."",""name"":""lava"",""color_hex"":""#FF5733"",""behavior"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""water""],""actions"":[{""type"":""do_set_type"",""target"":""east"",""to"":""gas""}]},{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""water""],""actions"":[{""type"":""do_set_type"",""target"":""west"",""to"":""gas""}]},{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""water""],""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""gas""}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""water""],""actions"":[{""type"":""do_set_type"",""target"":""south"",""to"":""gas""}]},{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""sand""],""actions"":[{""type"":""do_set_type"",""target"":""east"",""to"":""gas""}]},{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""sand""],""actions"":[{""type"":""do_set_type"",""target"":""west"",""to"":""gas""}]},{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""sand""],""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""gas""}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""sand""],""actions"":[{""type"":""do_set_type"",""target"":""south"",""to"":""gas""}]}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""type"":""do_swap"",""direction"":""south""}],""else_actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""type"":""do_swap"",""direction"":""east""}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""air"",""gas"",""water""],""actions"":[{""type"":""do_swap"",""direction"":""west""}]}]}]}]}]}}",automataScripting,1,5,5,5
+"A stone element that moves like sand, but that is immune to lava","{""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""lava"":{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""},{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""else_actions"":[{""direction"":""west"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""west"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_neighbor_is""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]}}","{""planning"":""To mimic sand-like motion, I will check if stone can move down or diagonally into empty, gas, or water cells, using an in_rand_mirror wrapper for unbiased settling. For lava immunity, I will ensure that stone does not transform or react when adjacent to lava, unlike sand. The stone will otherwise behave as a heavy, inert powder, settling where space is available."",""name"":""stone"",""color_hex"":""#A0A0A0"",""behavior"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""type"":""do_swap"",""direction"":""south""}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southwest"",""options"":[""air"",""gas"",""water""],""actions"":[{""type"":""do_swap"",""direction"":""southwest""}]}]}]}]}]}}",automataScripting,1,5,5,5
+An update to water. It now converts lava into stone when touching it,"{""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""lava"":{""actions"":[{""actions"":[{""direction"":""east"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""water""],""actions"":[{""to"":""gas"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""north"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""sand""],""actions"":[{""to"":""gas"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""},{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""actions"":[{""direction"":""east"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""else_actions"":[{""direction"":""west"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""west"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}],""type"":""if_neighbor_is""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""stone"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southwest"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southwest"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]}}","{""planning"":""To update water with the ability to convert adjacent lava into stone, I will add checks for all eight neighboring directions for the presence of lava, and set those lava cells to stone when found. This will be integrated before the existing powder-like movement behavior to prioritize the transformation reaction. The rest of water's movement logic will remain unchanged."",""name"":""water"",""color_hex"":""#3DAEE9"",""behavior"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""stone""}]},{""type"":""if_neighbor_is"",""direction"":""northeast"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""northeast"",""to"":""stone""}]},{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""east"",""to"":""stone""}]},{""type"":""if_neighbor_is"",""direction"":""southeast"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""southeast"",""to"":""stone""}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""south"",""to"":""stone""}]},{""type"":""if_neighbor_is"",""direction"":""southwest"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""southwest"",""to"":""stone""}]},{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""west"",""to"":""stone""}]},{""type"":""if_neighbor_is"",""direction"":""northwest"",""options"":[""lava""],""actions"":[{""type"":""do_set_type"",""target"":""northwest"",""to"":""stone""}]}]},{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""south""}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""east""}]}]}]}]}]}}",automataScripting,1,5,4,5
+"An electric element that removes gas it comes into contact with. After one second, the element disappears","{""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]}}","{""planning"":""To create this electric element, I will have it remove adjacent gas immediately upon contact by turning neighboring gas cells into air. Its alpha value will serve as a countdown: it will decrease steadily each update, and when it reaches zero, the element vanishes. An in_rand_rotation wrapper will let the electric element check all surrounding directions for gas and act accordingly."",""name"":""spark"",""color_hex"":""#FFE34B"",""behavior"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""north"",""to"":""air""}]},{""type"":""if_neighbor_is"",""direction"":""northeast"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""northeast"",""to"":""air""}]},{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""east"",""to"":""air""}]},{""type"":""if_neighbor_is"",""direction"":""southeast"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""southeast"",""to"":""air""}]},{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""south"",""to"":""air""}]},{""type"":""if_neighbor_is"",""direction"":""southwest"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""southwest"",""to"":""air""}]},{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""west"",""to"":""air""}]},{""type"":""if_neighbor_is"",""direction"":""northwest"",""options"":[""gas""],""actions"":[{""type"":""do_set_type"",""target"":""northwest"",""to"":""air""}]}]},{""type"":""do_set_alpha"",""target"":""self"",""operation"":""subtract"",""to"":17},{""type"":""if_alpha"",""target"":""self"",""comparison"":""less_than"",""is"":1,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""air""}]}]}}",automataScripting,1,4,4,4
+A grass element that grows on sand tiles,"{""water"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""else_actions"":[{""direction"":""east"",""options"":[""air"",""gas""],""actions"":[{""direction"":""east"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""spark"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""north"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""northeast"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""northeast"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""east"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""east"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""southeast"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""southeast"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""south"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""south"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""southwest"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""southwest"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""west"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""west"",""type"":""do_set_type""}],""type"":""if_neighbor_is""},{""direction"":""northwest"",""options"":[""gas""],""actions"":[{""to"":""air"",""target"":""northwest"",""type"":""do_set_type""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""},{""operation"":""subtract"",""value_index"":1.0,""to"":17.0,""target"":""self"",""type"":""do_set_alpha""},{""is"":1.0,""type"":""if_alpha"",""value_index"":1.0,""comparison"":""less_than"",""actions"":[{""to"":""air"",""target"":""self"",""type"":""do_set_type""}],""target"":""self""}]},""sand"":{""actions"":[{""actions"":[{""direction"":""south"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""south"",""type"":""do_swap""}],""else_actions"":[{""direction"":""southeast"",""options"":[""air"",""gas"",""water""],""actions"":[{""direction"":""southeast"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""if_neighbor_is""}],""type"":""in_rand_mirror""}]},""gas"":{""actions"":[{""actions"":[{""direction"":""north"",""options"":[""air""],""actions"":[{""direction"":""north"",""type"":""do_swap""}],""type"":""if_neighbor_is""}],""type"":""in_rand_rotation""}]}}","{""planning"":""To model grass that grows on sand, I'll use conditions to check if a sand tile exists directly beneath the grass. If there is and the tile directly above is air, the grass may grow upwards. I'll use if_chance to add variability to its spread. Additionally, I'll make grass try to propagate horizontally onto adjacent sand, only if those tiles are not already occupied by other grass."",""name"":""grass"",""color_hex"":""#69C872"",""behavior"":{""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""sand""],""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air""],""actions"":[{""type"":""if_chance"",""percent"":20,""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""grass""}]}]}]},{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""options"":[""sand""],""actions"":[{""type"":""if_neighbor_is_not"",""direction"":""east"",""options"":[""grass""],""actions"":[{""type"":""if_chance"",""percent"":10,""actions"":[{""type"":""do_spawn"",""direction"":""east"",""into_options"":[""sand""],""set_type"":""grass""}]}]}]}]},{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""west"",""options"":[""sand""],""actions"":[{""type"":""if_neighbor_is_not"",""direction"":""west"",""options"":[""grass""],""actions"":[{""type"":""if_chance"",""percent"":10,""actions"":[{""type"":""do_spawn"",""direction"":""west"",""into_options"":[""sand""],""set_type"":""grass""}]}]}]}]}]}}",automataScripting,1,5,3,4
+"kelp element that grows 1 tile up every 20 seconds, but only if adjacent to water","{""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]}}","{""planning"":""I'll use the alpha value as a timer that decrements each step until it reaches zero, then resets and spawns new kelp above if there's water adjacent and empty space available. The kelp will check for water neighbors before growing and only grow upward into air."",""name"":""kelp"",""color_hex"":""#2D5016"",""behavior"":{""actions"":[{""type"":""do_set_alpha"",""target"":""self"",""operation"":""subtract"",""to"":1},{""type"":""if_alpha"",""target"":""self"",""comparison"":""less_than"",""is"":1,""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""water""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air""],""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""kelp"",""set_alpha"":1200}]}]},{""type"":""do_set_alpha"",""target"":""self"",""operation"":""set"",""to"":1200}]}]}}",automataScripting,1,4,3,3
+"fish element that when it lands on water, moves around amongst adjacent tiles of water","{""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]},""kelp"":{""actions"":[{""type"":""do_set_alpha"",""operation"":""subtract"",""value_index"":1.0,""to"":1.0,""target"":""self""},{""type"":""if_alpha"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""set_alpha"":1200.0,""into_options"":[""air""],""set_type"":""kelp""}],""options"":[""air""]}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""do_set_alpha"",""operation"":""set"",""value_index"":1.0,""to"":1200.0,""target"":""self""}],""comparison"":""less_than"",""value_index"":1.0,""target"":""self"",""is"":1.0}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]}}","{
+  ""planning"": ""I'll create a fish element that uses random movement patterns when in contact with water. The fish will check if it's adjacent to water and then randomly swim to neighboring water tiles using in_rand_rotation for natural swimming behavior."",
+  ""name"": ""fish"",
+  ""color_hex"": ""#FF6B35"",
+  ""behavior"": {
+    ""actions"": [
+      {
+        ""type"": ""if_neighbor_count"",
+        ""direction_set"": [""north"", ""northeast"", ""east"", ""southeast"", ""south"", ""southwest"", ""west"", ""northwest""],
+        ""options"": [""water""],
+        ""comparison"": ""greater_than"",
+        ""count"": 0,
+        ""actions"": [
+          {
+            ""type"": ""if_chance"",
+            ""percent"": 30,
+            ""actions"": [
+              {
+                ""type"": ""in_rand_rotation"",
+                ""actions"": [
+                  {
+                    ""type"": ""if_neighbor_is"",
+                    ""direction"": ""north"",
+                    ""options"": [""water""],
+                    ""actions"": [
+                      {
+                        ""type"": ""do_swap"",
+                        ""direction"": ""north""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}",automataScripting,1,5,3,4
+"update fish, so that if in the air it falls until it cannot keep falling","{""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]},""kelp"":{""actions"":[{""type"":""do_set_alpha"",""operation"":""subtract"",""value_index"":1.0,""to"":1.0,""target"":""self""},{""type"":""if_alpha"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""set_alpha"":1200.0,""into_options"":[""air""],""set_type"":""kelp""}],""options"":[""air""]}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""do_set_alpha"",""operation"":""set"",""value_index"":1.0,""to"":1200.0,""target"":""self""}],""comparison"":""less_than"",""value_index"":1.0,""target"":""self"",""is"":1.0}]},""fish"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""water""]}]}],""percent"":30.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]}}","{""planning"":""I will modify the fish behavior to first check if it's in air and make it fall downward until it can't fall anymore. Then I'll add the existing water-based swimming behavior as a secondary action when the fish is in water."",""name"":""fish"",""color_hex"":""#4A90E2"",""behavior"":{""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""south""}],""else_actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""water""]}]}],""percent"":30}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0}]}]}}",automataScripting,1,5,5,5
+throw exploding bananas that curve upwards,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The spell involves throwing bananas that curve upwards and explode, which requires a projectile with negative gravity to create the upward curve. The bananas should be plant-based projectiles that trigger an explosion on impact or death. The explosion should manifest banana pieces or pulp to complete the comedic effect."",
+  ""friendlyName"": ""Explosive Banana Toss"",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 8,
+      ""speed"": 16,
+      ""gravity"": -0.1
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""plant""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [255, 255, 0]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 15
+    },
+    {
+      ""componentType"": ""deathTrigger"",
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 128
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""plant""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [255, 200, 100]
+        }
+      ]
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 128
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""plant""
+        },
+        {
+          ""componentType"": ""manifestation"",
+          ""radius"": 6,
+          ""material_properties"": {
+            ""class"": ""powder"",
+            ""color_rgb"": [255, 200, 100],
+            ""blockpath"": false,
+            ""density"": 1,
+            ""elements"": [""plant""],
+            ""lifespan"": 5
+          }
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,5,4,4
+create a cloud that drops a lot of ice,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants a cloud that drops ice, which suggests an AOE spell that persists and periodically creates ice manifestations. A timerTrigger with loop and reps will handle the repeated ice dropping behavior. The payload should be manifestations of solid ice with gravity to simulate falling ice chunks."",
+  ""friendlyName"": ""Ice Storm Cloud"",
+  ""components"": [
+    {
+      ""componentType"": ""aoe"",
+      ""radius"": 200,
+      ""turns"": 8
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""ice""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [180, 220, 255]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 35
+    },
+    {
+      ""componentType"": ""timerTrigger"",
+      ""secs"": 0.3,
+      ""loop"": true,
+      ""reps"": 25,
+      ""count"": 3,
+      ""payload_components"": [
+        {
+          ""componentType"": ""manifestation"",
+          ""radius"": 2,
+          ""material_properties"": {
+            ""class"": ""solid"",
+            ""color_rgb"": [200, 230, 255],
+            ""blockpath"": true,
+            ""density"": 2,
+            ""elements"": [""ice""],
+            ""lifespan"": 15
+          }
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,3,3,4
+create a baloon that floats then explodes causing damage,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants a balloon that floats and then explodes, which suggests a projectile with low gravity to simulate floating. The explosion should cause damage, which requires a deathTrigger with an explosion payload. I'll use wind element for the floating balloon and add a timer to make it explode automatically after a few seconds."",
+  ""components"": [
+    {""componentType"": ""projectile"", ""radius"": 8, ""speed"": 12, ""gravity"": 0.05},
+    {""componentType"": ""element"", ""element"": ""wind""},
+    {""componentType"": ""color"", ""rgb"": [200, 100, 255]},
+    {""componentType"": ""manaCost"", ""cost"": 25},
+    {""componentType"": ""timerTrigger"", ""secs"": 3.0, ""replace"": true, ""payload_components"": [
+      {""componentType"": ""explosion"", ""radius"": 128},
+      {""componentType"": ""element"", ""element"": ""wind""},
+      {""componentType"": ""color"", ""rgb"": [200, 100, 255]}
+    ]},
+    {""componentType"": ""deathTrigger"", ""payload_components"": [
+      {""componentType"": ""explosion"", ""radius"": 128},
+      {""componentType"": ""element"", ""element"": ""wind""},
+      {""componentType"": ""color"", ""rgb"": [200, 100, 255]}
+    ]}
+  ],
+  ""friendlyName"": ""Floating Bomb""
+}",spellScripting,1,4,3,3
+summon a dragon that breaths ice,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The user wants to summon a dragon that breathes ice, which suggests a mobile entity that can release ice attacks. A wallCrawl component works well for a dragon that moves around the battlefield. The ice breathing ability should be implemented as a buttonTrigger that fires ice projectiles when activated. The dragon itself should have a substantial presence, so a larger radius is appropriate."",""friendlyName"":""Ice Dragon"",""count"":1,""components"":[{""componentType"":""wallCrawl"",""radius"":12,""speed"":8},{""componentType"":""element"",""element"":""ice""},{""componentType"":""color"",""rgb"":[150,200,255]},{""componentType"":""manaCost"",""cost"":60},{""componentType"":""buttonTrigger"",""count"":3,""payload_components"":[{""componentType"":""projectile"",""radius"":6,""speed"":18,""gravity"":0.1},{""componentType"":""element"",""element"":""ice""},{""componentType"":""color"",""rgb"":[200,230,255]},{""componentType"":""spawnRandAngle""},{""componentType"":""impactTrigger"",""replace"":true,""payload_components"":[{""componentType"":""manifestation"",""radius"":4,""material_properties"":{""class"":""solid"",""color_rgb"":[200,230,255],""blockpath"":true,""density"":1,""elements"":[""ice""],""lifespan"":15}}]}]}]}",spellScripting,1,2,2,2
+wrap opponant in a bubble that slows them down.,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{""planning"":""The spell concept requires creating a bubble around an opponent that slows them down. This is best implemented as a projectile that seeks enemies using the homing component. When it impacts, it should create a manifestation of a translucent, viscous material that represents the bubble trap. The viscous property will create the slowing effect, and the manifestation should persist for several seconds to trap the opponent effectively."",""friendlyName"":""Binding Bubble Trap"",""count"":1,""components"":[{""componentType"":""projectile"",""radius"":8,""speed"":12,""gravity"":0.1},{""componentType"":""element"",""element"":""water""},{""componentType"":""color"",""rgb"":[100,200,255]},{""componentType"":""homing"",""strength"":0.2},{""componentType"":""manaCost"",""cost"":25},{""componentType"":""impactTrigger"",""replace"":true,""payload_components"":[{""componentType"":""manifestation"",""radius"":6,""material_properties"":{""class"":""liquid"",""color_rgb"":[150,220,255],""blockpath"":false,""density"":1,""viscous"":true,""elements"":[""water""],""lifespan"":8}}]}]}
+---END_SECTION---
+[spellScripting-2025-7-23-11-8-43]
+input::shoot hundreds of large white balls that explode
+context::[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]
+response::{
+  ""planning"": ""The user wants to shoot hundreds of large white balls that explode, which requires a high-count projectile as the base. Each projectile needs a large radius to be visually substantial. The explosion aspect requires a deathTrigger with an explosion payload to create the burst effect when each ball reaches the end of its lifecycle."",
+  ""friendlyName"": ""White Ball Barrage"",
+  ""count"": 100,
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 12,
+      ""speed"": 18,
+      ""gravity"": 0.3
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""neutral""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [255, 255, 255]
+    },
+    {
+      ""componentType"": ""spawnRandAngle""
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 80
+    },
+    {
+      ""componentType"": ""deathTrigger"",
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 96
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""neutral""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [255, 255, 255]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,4,3,4
+shoot hundreds of large white balls that explode,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants to shoot hundreds of large white balls that explode, which requires a high-count projectile as the base. Each projectile needs a large radius to be visually substantial. The explosion aspect requires a deathTrigger with an explosion payload to create the burst effect when each ball reaches the end of its lifecycle."",
+  ""friendlyName"": ""White Ball Barrage"",
+  ""count"": 100,
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 12,
+      ""speed"": 18,
+      ""gravity"": 0.3
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""neutral""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [255, 255, 255]
+    },
+    {
+      ""componentType"": ""spawnRandAngle""
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 80
+    },
+    {
+      ""componentType"": ""deathTrigger"",
+      ""payload_components"": [
+        {
+          ""componentType"": ""explosion"",
+          ""radius"": 96
+        },
+        {
+          ""componentType"": ""element"",
+          ""element"": ""neutral""
+        },
+        {
+          ""componentType"": ""color"",
+          ""rgb"": [255, 255, 255]
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,1,1,1
+teleport spell to move in direction cast,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants a teleport spell that moves the caster in the direction cast. This requires a teleportCaster component as the primary effect. To establish direction, I'll use a fast, invisible projectile that travels briefly in the cast direction before triggering the teleport via a timerTrigger."",
+  ""friendlyName"": ""Directional Blink"",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 1,
+      ""speed"": 20,
+      ""gravity"": 0
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""neutral""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [200, 200, 255]
+    },
+    {
+      ""componentType"": ""manaCost"",
+      ""cost"": 25
+    },
+    {
+      ""componentType"": ""timerTrigger"",
+      ""secs"": 0.2,
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""teleportCaster""
+        }
+      ]
+    }
+  ]
+}",spellScripting,1,3,3,3
+cast spell to fire water,"[""fire"",""water"",""ice"",""electric"",""poison"",""wind"",""earth"",""plant"",""neutral"",""healing""]","{
+  ""planning"": ""The user wants to cast a spell that fires water, which suggests a projectile-based spell with a water element. Since it's firing water, I'll use a projectile component with appropriate speed and radius. The water should manifest upon impact, creating a splash effect through an impactTrigger that replaces the projectile with a liquid water manifestation."",
+  ""components"": [
+    {
+      ""componentType"": ""projectile"",
+      ""radius"": 5,
+      ""speed"": 18,
+      ""gravity"": 0.3
+    },
+    {
+      ""componentType"": ""element"",
+      ""element"": ""water""
+    },
+    {
+      ""componentType"": ""color"",
+      ""rgb"": [100, 150, 255]
+    },
+    {
+      ""componentType"": ""impactTrigger"",
+      ""replace"": true,
+      ""payload_components"": [
+        {
+          ""componentType"": ""manifestation"",
+          ""radius"": 6,
+          ""material_properties"": {
+            ""class"": ""liquid"",
+            ""color_rgb"": [100, 150, 255],
+            ""blockpath"": false,
+            ""density"": 1,
+            ""elements"": [""water""]
+          }
+        }
+      ]
+    }
+  ],
+  ""friendlyName"": ""Water Blast""
+}",spellScripting,1,5,5,5
+Wood that is brown that slowly grows if in sand and near water,"{""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]}}","{""planning"":""I will create a wood element that checks for adjacent water and if it's standing in sand to trigger growth. The growth will be slow using a chance-based system, and wood will expand by converting adjacent air cells into wood. I'll use the alpha value to manage growth timing and maturity."",""name"":""wood"",""color_hex"":""#8B4513"",""behavior"":{""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""options"":[""sand""],""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""water""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""if_chance"",""percent"":3,""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air""],""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""wood"",""set_alpha"":50}]}]}]}]}]}]}}",automataScripting,1,5,5,5
+Beaver eats wood red in color,"{""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]},""wood"":{""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""set_alpha"":50.0,""into_options"":[""air""],""set_type"":""wood""}],""options"":[""air""]}]}],""percent"":3.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""options"":[""sand""]}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]}}","{""planning"":""I'll create a beaver element that actively seeks out and consumes wood blocks. The beaver will move randomly to search for wood, and when it finds wood nearby, it will move to that location and consume it by turning the wood into air. I'll use red coloring as specified and random movement patterns to simulate the beaver's foraging behavior."",""name"":""beaver"",""color_hex"":""#CC3333"",""behavior"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""wood""],""actions"":[{""type"":""do_swap"",""direction"":""north"",""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""air""}]}],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air""],""actions"":[{""type"":""do_swap"",""direction"":""north""}]}]}]}]}}",automataScripting,1,5,4,5
+Bee is yellow and floats around not doing much,"{""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]},""wood"":{""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""set_alpha"":50.0,""into_options"":[""air""],""set_type"":""wood""}],""options"":[""air""]}]}],""percent"":3.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""options"":[""sand""]}]},""beaver"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north"",""actions"":[{""type"":""do_set_type"",""to"":""air"",""target"":""self""}]}],""options"":[""wood""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]}}","{""planning"":""I'll create a bee that moves randomly in all directions like a gas, but with a slower movement rate to simulate floating behavior. The bee will be yellow and have simple movement patterns without complex interactions with other elements."",""name"":""bee"",""color_hex"":""#FFDD00"",""behavior"":{""actions"":[{""type"":""if_chance"",""percent"":30,""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air"",""gas""],""actions"":[{""type"":""do_swap"",""direction"":""north""}]}]}]}]}}",automataScripting,1,5,5,5
+Ivy is green and grows if next to sand and water,"{""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]},""flower"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""flower""}],""options"":[""air""]}]}],""percent"":1.0}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]}}","{""planning"":""I'll create an ivy element that checks for both sand and water in its vicinity to trigger growth. The ivy will spread to adjacent air cells when the growth conditions are met. I'll also make it flammable like other plant materials by checking for fire neighbors."",""name"":""ivy"",""color_hex"":""#228B22"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""fire""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""do_set_type"",""target"":""self"",""to"":""fire""}]},{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""sand""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""if_neighbor_count"",""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""options"":[""water""],""comparison"":""greater_than"",""count"":0,""actions"":[{""type"":""if_chance"",""percent"":5,""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""options"":[""air""],""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""ivy""}]}]}]}]}]}]}}",automataScripting,1,5,5,5
+Update ivy to grown next to wood,"{""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]},""flower"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""flower""}],""options"":[""air""]}]}],""percent"":1.0}]},""ivy"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""ivy""}],""options"":[""air""]}]}],""percent"":5.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""comparison"":""greater_than"",""options"":[""sand""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""wood"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""wood""}],""options"":[""air""]}]}],""percent"":2.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""comparison"":""greater_than"",""options"":[""sand""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]}}","{""planning"":""I need to modify the existing ivy behavior to allow it to grow next to wood in addition to its current growth conditions. I'll add wood to the neighbor count check that enables ivy growth, so ivy can spread when it's adjacent to either sand or wood."",""name"":""ivy"",""color_hex"":""#228B22"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""ivy""}],""options"":[""air""]}]}],""percent"":5}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0}],""comparison"":""greater_than"",""options"":[""sand"",""wood""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0}]}}",automataScripting,1,5,4,5
+update flower to grown only next to ivy,"{""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]},""flower"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""flower""}],""options"":[""air""]}]}],""percent"":1.0}]},""ivy"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""ivy""}],""options"":[""air""]}]}],""percent"":5.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""comparison"":""greater_than"",""options"":[""sand"",""wood""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""wood"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""wood""}],""options"":[""air""]}]}],""percent"":2.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""comparison"":""greater_than"",""options"":[""sand""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]}}","{""planning"":""I need to modify the flower element to only grow when there is ivy nearby. I'll keep the fire interaction but change the growth condition to check for ivy neighbors instead of growing randomly. The flower will only spawn new flowers if there's ivy in adjacent cells."",""name"":""flower"",""color_hex"":""#FF69B4"",""behavior"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""flower""}],""options"":[""air""]}]}],""percent"":3}],""comparison"":""greater_than"",""options"":[""ivy""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0}]}}",automataScripting,1,5,5,5
+"Fire is red and will destroy wood, flowers and ivy and turn sand into a wall","{""sand"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas"",""water""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""]}]}]}]},""flower"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""flower""}],""options"":[""air""]}]}],""percent"":3.0}],""comparison"":""greater_than"",""options"":[""ivy""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""ivy"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""ivy""}],""options"":[""air""]}]}],""percent"":5.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""comparison"":""greater_than"",""options"":[""sand"",""wood""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""water"":{""actions"":[{""type"":""in_rand_mirror"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""south"",""actions"":[{""type"":""do_swap"",""direction"":""south""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""southeast"",""actions"":[{""type"":""do_swap"",""direction"":""southeast""}],""options"":[""air"",""gas""],""else_actions"":[{""type"":""if_neighbor_is"",""direction"":""east"",""actions"":[{""type"":""do_swap"",""direction"":""east""}],""options"":[""air"",""gas""]}]}]}]}]},""wood"":{""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""do_set_type"",""to"":""fire"",""target"":""self""}],""comparison"":""greater_than"",""options"":[""fire""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0},{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_neighbor_count"",""actions"":[{""type"":""if_chance"",""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_spawn"",""direction"":""north"",""into_options"":[""air""],""set_type"":""wood""}],""options"":[""air""]}]}],""percent"":2.0}],""comparison"":""greater_than"",""options"":[""water""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}],""comparison"":""greater_than"",""options"":[""sand""],""direction_set"":[""north"",""northeast"",""east"",""southeast"",""south"",""southwest"",""west"",""northwest""],""count"":0.0}]},""gas"":{""actions"":[{""type"":""in_rand_rotation"",""actions"":[{""type"":""if_neighbor_is"",""direction"":""north"",""actions"":[{""type"":""do_swap"",""direction"":""north""}],""options"":[""air""]}]}]}}","{
+  ""planning"": ""I'll create a fire element that spreads by converting flammable materials (wood, flower, ivy) into more fire. It will have a special interaction with sand, turning it into a wall material. The fire will have a lifespan managed by alpha values and will move like a gas with upward tendency."",
+  ""name"": ""fire"",
+  ""color_hex"": ""#FF0000"",
+  ""behavior"": {
+    ""actions"": [
+      {
+        ""type"": ""do_set_alpha"",
+        ""target"": ""self"",
+        ""operation"": ""subtract"",
+        ""to"": 5
+      },
+      {
+        ""type"": ""if_alpha"",
+        ""target"": ""self"",
+        ""comparison"": ""less_than"",
+        ""is"": 1,
+        ""actions"": [
+          {
+            ""type"": ""do_set_type"",
+            ""target"": ""self"",
+            ""to"": ""air""
+          }
+        ]
+      },
+      {
+        ""type"": ""in_rand_rotation"",
+        ""actions"": [
+          {
+            ""type"": ""if_neighbor_is"",
+            ""direction"": ""north"",
+            ""options"": [""wood"", ""flower"", ""ivy""],
+            ""actions"": [
+              {
+                ""type"": ""do_set_type"",
+                ""target"": ""north"",
+                ""to"": ""fire""
+              },
+              {
+                ""type"": ""do_set_alpha"",
+                ""target"": ""north"",
+                ""operation"": ""set"",
+                ""to"": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        ""type"": ""in_rand_rotation"",
+        ""actions"": [
+          {
+            ""type"": ""if_neighbor_is"",
+            ""direction"": ""north"",
+            ""options"": [""sand""],
+            ""actions"": [
+              {
+                ""type"": ""do_set_type"",
+                ""target"": ""north"",
+                ""to"": ""wall""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        ""type"": ""if_chance"",
+        ""percent"": 70,
+        ""actions"": [
+          {
+            ""type"": ""if_neighbor_is"",
+            ""direction"": ""north"",
+            ""options"": [""air""],
+            ""actions"": [
+              {
+                ""type"": ""do_swap"",
+                ""direction"": ""north""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        ""type"": ""if_chance"",
+        ""percent"": 30,
+        ""actions"": [
+          {
+            ""type"": ""in_rand_rotation"",
+            ""actions"": [
+              {
+                ""type"": ""if_neighbor_is"",
+                ""direction"": ""north"",
+                ""options"": [""air""],
+                ""actions"": [
+                  {
+                    ""type"": ""do_swap"",
+                    ""direction"": ""north""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}",automataScripting,1,5,5,5

@@ -1,0 +1,1562 @@
+[spellScripting-2025-01-01-01-01-01]
+input::Water balloon
+context::["fire", "water", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Water orb splash",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 5,
+      "speed": 15
+    },
+    {
+      "componentType": "element",
+      "element": "water"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        127,
+        127,
+        255
+      ]
+    },
+    {
+      "componentType": "impactTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 3,
+          "material_properties": {
+            "class": "liquid",
+            "color_rgb": [
+              127,
+              127,
+              255
+            ],
+            "blockpath": false,
+            "density": 1,
+            "elements": [
+              "water"
+            ],
+            "harmful": true
+          }
+        }
+      ]
+    }
+  ]
+}
+[end]
+[spellScripting-2025-01-01-01-01-02]
+input::A small tomato with a satisfying heft to it
+context::["fire", "water", "earth", "plant", "darkness"]
+response::{
+  "friendlyName": "Summon plump tomato",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 2,
+      "speed": 15
+    },
+    {
+      "componentType": "element",
+      "element": "plant"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        64,
+        64
+      ]
+    },
+    {
+      "componentType": "impactTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 4,
+          "material_properties": {
+            "class": "powder",
+            "color_rgb": [
+              255,
+              64,
+              64
+            ],
+            "blockpath": true,
+            "density": 1,
+            "elements": [
+              "plant"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-03]
+input::A volley of flaming arrows
+context::["fire", "water", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Singeing arrow volley",
+  "count": 3,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 1,
+      "speed": 15
+    },
+    {
+      "componentType": "element",
+      "element": "fire"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        60,
+        0
+      ]
+    },
+    {
+      "componentType": "impactTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 3,
+          "material_properties": {
+            "class": "gas",
+            "color_rgb": [
+              255,
+              100,
+              0
+            ],
+            "blockpath": false,
+            "density": 0.5,
+            "elements": [
+              "fire"
+            ],
+            "harmful": true,
+            "lifespan": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-04]
+input::A mote of light controlled by telekinesis. It is bound to my soul and allows me to walk the planes between realities
+context::["fire", "water", "earth", "wind", "ice"]
+response::{
+  "friendlyName": "Controllable orb of teleportation",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 2,
+      "speed": 15,
+      "bounces": 5,
+      "gravity": 0.1
+    },
+    {
+      "componentType": "element",
+      "element": "wind"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        188,
+        188,
+        188
+      ]
+    },
+    {
+      "componentType": "controllable",
+      "mana_cost": 0.1
+    },
+    {
+      "componentType": "buttonTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "teleportCaster"
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-05]
+input::A stormy cloud that follows me around
+context::["fire", "water", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Personal rain cloud",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "aoe",
+      "radius": 150,
+      "turns": 5
+    },
+    {
+      "componentType": "element",
+      "element": "water"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        127,
+        127,
+        255
+      ]
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 1,
+      "loop": true,
+      "reps": 25,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 2,
+          "material_properties": {
+            "class": "liquid",
+            "color_rgb": [
+              127,
+              127,
+              255
+            ],
+            "blockpath": false,
+            "density": 1,
+            "elements": [
+              "water"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-06]
+input::an evil aura that wards away my enemies
+context::["fire", "water", "earth", "wind", "darkness"]
+response::{
+  "friendlyName": "aura of evil",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "aoe",
+      "radius": 150,
+      "turns": 5
+    },
+    {
+      "componentType": "element",
+      "element": "darkness"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 10,
+      "loop": true,
+      "reps": 10,
+      "payload_components": [
+        {
+          "componentType": "projectile",
+          "radius": 3,
+          "speed": 10,
+          "bounces": 5,
+          "gravity": 0
+        },
+        {
+          "componentType": "element",
+          "element": "darkness"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            127,
+            0,
+            64
+          ]
+        },
+        {
+          "componentType": "spawnRandAngle"
+        }
+      ]
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 5,
+          "material_properties": {
+            "class": "gas",
+            "color_rgb": [
+              0,
+              0,
+              0
+            ],
+            "blockpath": false,
+            "density": 2,
+            "elements": [
+              "darkness"
+            ],
+            "harmful": true,
+            "lifespan": 10
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-07]
+input::protective electric shield that explodes and heals me on button press
+context::["fire", "water", "electric", "wind", "healing"]
+response::{
+  "friendlyName": "voltaic bubble shield",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "shield",
+      "radius": 150,
+      "turns": 5
+    },
+    {
+      "componentType": "element",
+      "element": "electric"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        255,
+        0
+      ]
+    },
+    {
+      "componentType": "buttonTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "explosion",
+          "radius": 128
+        },
+        {
+          "componentType": "element",
+          "element": "wind"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            255,
+            127,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "buffCaster",
+          "heal": 35,
+          "resist": "electric"
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-08]
+input::A mischievous fire sprite that explores the map and sends out homing flames on button press
+context::["fire", "water", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Devilish fire sprite",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "wallCrawl",
+      "radius": 7,
+      "speed": 10
+    },
+    {
+      "componentType": "element",
+      "element": "fire"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        60,
+        0
+      ]
+    },
+    {
+      "componentType": "buttonTrigger",
+      "replace": true,
+      "count": 5,
+      "payload_components": [
+        {
+          "componentType": "projectile",
+          "radius": 3,
+          "speed": 15,
+          "bounces": 3,
+          "gravity": 0
+        },
+        {
+          "componentType": "element",
+          "element": "fire"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            255,
+            60,
+            0
+          ]
+        },
+        {
+          "componentType": "spawnRandAngle"
+        },
+        {
+          "componentType": "homing",
+          "strength": 0.1
+        },
+        {
+          "componentType": "deathTrigger",
+          "payload_components": [
+            {
+              "componentType": "manifestation",
+              "radius": 2,
+              "material_properties": {
+                "class": "gas",
+                "color_rgb": [
+                  255,
+                  100,
+                  0
+                ],
+                "blockpath": false,
+                "density": 0.5,
+                "elements": [
+                  "fire"
+                ],
+                "harmful": true,
+                "lifespan": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-09]
+input::controllable homing psychic bolt
+context::["fire", "water", "earth", "psychic", "arcane"]
+response::{
+  "friendlyName": "Mind bolt",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 3,
+      "speed": 20,
+      "bounces": 5,
+      "gravity": 0
+    },
+    {
+      "componentType": "element",
+      "element": "psychic"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        188,
+        127,
+        255
+      ]
+    },
+    {
+      "componentType": "homing",
+      "strength": 0.1
+    },
+    {
+      "componentType": "controllable"
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "aoe",
+          "radius": 150,
+          "turns": 3
+        },
+        {
+          "componentType": "element",
+          "element": "psychic"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            188,
+            127,
+            255
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-10]
+input::A laser beam of healing energy
+context::["fire", "water", "healing", "wind", "arcane"]
+response::{
+  "friendlyName": "Holy laser of empowerment",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 5,
+      "speed": 20,
+      "bounces": 3,
+      "gravity": 0
+    },
+    {
+      "componentType": "element",
+      "element": "healing"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        255,
+        224
+      ]
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 0.1,
+      "loop": true,
+      "reps": 999,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 2,
+          "material_properties": {
+            "class": "gas",
+            "color_rgb": [
+              255,
+              255,
+              224
+            ],
+            "blockpath": false,
+            "density": 2,
+            "elements": [
+              "healing"
+            ],
+            "lifespan": 3
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-11]
+input::Holy hand grenade
+context::["fire", "water", "healing", "wind", "arcane"]
+response::{
+  "friendlyName": "Holy hand grenade",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 8,
+      "speed": 15,
+      "bounces": 999
+    },
+    {
+      "componentType": "element",
+      "element": "fire"
+    },
+    {
+      "componentType": "element",
+      "element": "healing"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        255,
+        188
+      ]
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 3,
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "explosion",
+          "radius": 256
+        },
+        {
+          "componentType": "element",
+          "element": "fire"
+        },
+        {
+          "componentType": "element",
+          "element": "healing"
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-12]
+input::A bouncing blob of magma that leaves a lava trail in its wake
+context::["fire", "water", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Magma catapault",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 10,
+      "speed": 15,
+      "bounces": 5
+    },
+    {
+      "componentType": "element",
+      "element": "fire"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        60,
+        0
+      ]
+    },
+    {
+      "componentType": "impactTrigger",
+      "reps": 6,
+      "replace": false,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 2,
+          "material_properties": {
+            "class": "liquid",
+            "color_rgb": [
+              255,
+              100,
+              0
+            ],
+            "blockpath": false,
+            "density": 1,
+            "elements": [
+              "fire"
+            ],
+            "viscous": true,
+            "harmful": true,
+            "lifespan": 30
+          }
+        }
+      ]
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "explosion",
+          "radius": 128
+        },
+        {
+          "componentType": "element",
+          "element": "fire"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            255,
+            60,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-13]
+input::Ender pearl
+context::["neutral", "water", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Ender pearl",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 2,
+      "speed": 15
+    },
+    {
+      "componentType": "element",
+      "element": "neutral"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        64,
+        127,
+        255
+      ]
+    },
+    {
+      "componentType": "impactTrigger",
+      "payload_components": [
+        {
+          "componentType": "teleportCaster"
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-14]
+input::Heavy stone orb of staying there and doing nothing
+context::["fire", "water", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Inert orb of uselessness",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 10,
+      "speed": 20,
+      "gravity": 0.4
+    },
+    {
+      "componentType": "element",
+      "element": "earth"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        127,
+        127,
+        127
+      ]
+    },
+    {
+      "componentType": "impactTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 3,
+          "material_properties": {
+            "class": "solid",
+            "color_rgb": [
+              127,
+              127,
+              127
+            ],
+            "blockpath": true,
+            "density": 1,
+            "elements": [
+              "earth"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-15]
+input::A bomb that releases a heavy poisonous gas
+context::["fire", "poison", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Toxic Bomb",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 5,
+      "speed": 15,
+      "bounces": 999
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 5,
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 8,
+          "material_properties": {
+            "class": "gas",
+            "color_rgb": [
+              64,
+              255,
+              0
+            ],
+            "blockpath": false,
+            "density": 2,
+            "elements": [
+              "poison"
+            ],
+            "harmful": true,
+            "lifespan": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-16]
+input::A spirit of pure energy, hot to the touch and constantly dispelling sparks wherever it walks
+context::["fire", "electric", "earth", "wind", "holy"]
+response::{
+  "friendlyName": "Spark strider",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "wallCrawl",
+      "radius": 10,
+      "speed": 15
+    },
+    {
+      "componentType": "element",
+      "element": "electric"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        200,
+        200,
+        255
+      ]
+    },
+    {
+      "componentType": "manaCost",
+      "cost": 10
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 0.1,
+      "loop": true,
+      "reps": 100,
+      "replace": false,
+      "payload_components": [
+        {
+          "componentType": "projectile",
+          "radius": 2,
+          "speed": 20,
+          "bounces": 999
+        },
+        {
+          "componentType": "spawnRandAngle"
+        },
+        {
+          "componentType": "element",
+          "element": "electric"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            255,
+            200,
+            127
+          ]
+        },
+        {
+          "componentType": "timerTrigger",
+          "secs": 0.1,
+          "replace": true,
+          "payload_components": [
+            {
+              "componentType": "explosion",
+              "radius": 32
+            },
+            {
+              "componentType": "element",
+              "element": "fire"
+            },
+            {
+              "componentType": "color",
+              "rgb": [
+                200,
+                255,
+                127
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-17]
+input::A bomb that releases seemingly harmless powder, but after 3 turns, the powder ignites in a firey plume.
+context::["fire", "electric", "earth", "wind", "holy", "neutral"]
+response::{
+  "friendlyName": "Powder trap",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 2,
+      "speed": 15,
+      "bounces": 3
+    },
+    {
+      "componentType": "element",
+      "element": "neutral"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "componentType": "manaCost",
+      "cost": 30
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "aoe",
+          "radius": 1,
+          "turns": 3
+        },
+        {
+          "componentType": "element",
+          "element": "neutral"
+        },
+        {
+          "componentType": "timerTrigger",
+          "secs": 0.1,
+	  "replace": false,
+          "payload_components": [
+            {
+              "componentType": "manifestation",
+              "radius": 5,
+              "material_properties": {
+                "class": "powder",
+                "color_rgb": [
+                  255,
+                  255,
+                  224
+                ],
+                "blockpath": true,
+                "density": 1,
+                "elements": [
+                  "earth"
+                ]
+              }
+            },
+            {
+              "componentType": "manaCost",
+              "cost": 10
+            }
+          ]
+        },
+        {
+          "componentType": "deathTrigger",
+          "payload_components": [
+            {
+              "componentType": "manifestation",
+              "radius": 5,
+              "material_properties": {
+                "class": "gas",
+                "color_rgb": [
+                  255,
+                  100,
+                  0
+                ],
+                "blockpath": false,
+                "density": 0.5,
+                "elements": [
+                  "fire"
+                ],
+                "harmful": true,
+                "lifespan": 2
+              }
+            },
+            {
+              "componentType": "manaCost",
+              "cost": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-18]
+input::A protective shield of exotic matter. After 6 turns have passed, the shield warps me back into safety and transforms into a protective wind vortex
+context::["fire", "strange", "earth", "wind", "holy"]
+response::{
+  "friendlyName": "Extradimensional warp shield",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "shield",
+      "radius": 150,
+      "turns": 6
+    },
+    {
+      "componentType": "element",
+      "element": "strange"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "shield",
+          "radius": 150,
+          "turns": 1
+        },
+        {
+          "componentType": "element",
+          "element": "wind"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "componentType": "timerTrigger",
+          "secs": 0.1,
+          "replace": false,
+          "payload_components": [
+            {
+              "componentType": "teleportCaster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-19]
+input::A smoke screen getaway, but with a huge pool of lava that doesn't hurt me
+context::["fire", "water", "earth", "wind", "healing"]
+response::{
+  "friendlyName": "Magma immunity screen",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "speed": 0,
+    },
+    {
+      "componentType": "element",
+      "element": "healing"
+    },
+    {
+      "componentType": "spawnAngle",
+      "angle": 270
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 0.0001,
+      "replace": false,
+      "payload_components": [
+        {
+          "componentType": "buffCaster",
+          "heal": 25,
+          "resist": "fire"
+        }
+      ]
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 10,
+          "material_properties": {
+            "class": "liquid",
+            "color_rgb": [
+              255,
+              100,
+              0
+            ],
+            "blockpath": false,
+            "density": 2,
+            "elements": [
+              "fire"
+            ],
+            "viscous": true
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-20]
+input::Release a bunch of small bouncy balls that ricochet off of everything. They move strangely and can be influenced slightly. After 5 seconds, they solidify into solid platforms wherever they are
+context::["fire", "water", "earth", "wind", "healing", "bouncy", "neutral", "strange"]
+response::{
+  "friendlyName": "Portable platform balls",
+  "count": 5,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 2,
+      "speed": 20,
+      "bounces": 999
+    },
+    {
+      "componentType": "element",
+      "element": "bouncy"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        64,
+        255,
+        32
+      ]
+    },
+    {
+      "componentType": "boomerang",
+      "strength": 0.1
+    },
+    {
+      "componentType": "controllable",
+      "mana_cost": 0.1
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 5,
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 2,
+          "material_properties": {
+            "class": "solid",
+            "color_rgb": [
+              64,
+              255,
+              32
+            ],
+            "blockpath": true,
+            "density": 1,
+            "elements": [
+              "neutral"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-21]
+input::A small earthen golem that walks around and clings to walls. When a button is pressed, it collapses into a pile of sentient mud that converts other matter into itself
+context::["fire", "water", "earth", "wind", "healing", "bouncy", "neutral", "strange"]
+response::{
+  "friendlyName": "contagious golem",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "wallCrawl",
+      "radius": 30,
+      "speed": 5
+    },
+    {
+      "componentType": "element",
+      "element": "earth"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        125,
+        100,
+        75
+      ]
+    },
+    {
+      "componentType": "buttonTrigger",
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 10,
+          "material_properties": {
+            "class": "powder",
+            "color_rgb": [
+              125,
+              100,
+              75
+            ],
+            "blockpath": true,
+            "density": 1,
+            "elements": [
+              "earth",
+	      "strange"
+            ],
+            "zombie": true
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-22]
+input::Throw a small vial of a zombie virus that infects any water it flows into
+context::["fire", "water", "earth", "poison", "healing", "bouncy", "neutral", "strange"]
+response::{
+  "friendlyName": "zombie fluid",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 1,
+      "speed": 15
+    },
+    {
+      "componentType": "impactTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 5,
+          "material_properties": {
+            "class": "liquid",
+            "color_rgb": [
+              64,
+              100,
+              32
+            ],
+            "blockpath": false,
+            "density": 1,
+            "elements": [
+              "poison"
+            ],
+            "zombie": true,
+            "harmful": true
+          }
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-23]
+input::A slow moving storm cloud that rains down in a torrential downpour. After a while, it sends down an explosive lighting strike as a finale
+context::["fire", "water", "earth", "poison", "electric", "bouncy", "neutral", "wind"]
+response::{
+  "friendlyName": "illusiory storm cloud",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 30,
+      "speed": 5,
+      "gravity": 0
+    },
+    {
+      "componentType": "element",
+      "element": "wind"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        64,
+        64,
+        64
+      ]
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 0.33,
+      "loop": true,
+      "reps": 10,
+      "replace": false,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 3,
+          "material_properties": {
+            "class": "liquid",
+            "color_rgb": [
+              160,
+              200,
+              255
+            ],
+            "blockpath": false,
+            "density": 1,
+            "elements": [
+              "water"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "projectile",
+          "radius": 5,
+          "speed": 25
+        },
+        {
+          "componentType": "element",
+          "element": "electric"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "componentType": "spawnAngle",
+          "angle": 270
+        },
+        {
+          "componentType": "deathTrigger",
+          "payload_components": [
+            {
+              "componentType": "explosion",
+              "radius": 256
+            },
+            {
+              "componentType": "element",
+              "element": "electric"
+            },
+            {
+              "componentType": "element",
+              "element": "fire"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-24]
+input::A domain expansion that spreads dark magic over a wide area. In this dark realm of influence, evil spirits may shoot about, spreading more darkness where they land
+context::["fire", "electric", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "arcane shroud",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "aoe",
+      "radius": 500,
+      "turns": 5
+    },
+    {
+      "componentType": "element",
+      "element": "arcane"
+    },
+    {
+      "componentType": "color",
+      "rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "componentType": "manaCost",
+      "cost": 50
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 10,
+      "loop": true,
+      "reps": 10,
+      "replace": false,
+      "count": 10,
+      "payload_components": [
+        {
+          "componentType": "projectile",
+          "radius": 5,
+          "speed": 15,
+          "bounces": 5
+        },
+        {
+          "componentType": "manaCost",
+          "cost": 10
+        },
+        {
+          "componentType": "spawnRandAngle"
+        },
+        {
+          "componentType": "deathTrigger",
+          "payload_components": [
+            {
+              "componentType": "manifestation",
+              "radius": 2,
+              "material_properties": {
+                "class": "gas",
+                "color_rgb": [
+                  0,
+                  0,
+                  0
+                ],
+                "blockpath": false,
+                "density": 1,
+                "elements": [
+                  "neutral"
+                ],
+                "zombie": true,
+                "harmful": true,
+                "lifespan": 2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[end]
+[spellScripting-2025-01-01-01-01-25]
+input::explode literally everything
+context::["fire", "electric", "earth", "wind", "arcane"]
+response::{
+  "friendlyName": "Ballistic firecracker",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 2,
+      "speed": 0,
+      "gravity": 0
+    },
+    {
+      "componentType": "element",
+      "element": "neutral"
+    },
+    {
+      "componentType": "timerTrigger",
+      "secs": 0.33,
+      "loop": true,
+      "reps": 15,
+      "replace": false,
+      "payload_components": [
+        {
+          "componentType": "projectile",
+          "radius": 2,
+          "speed": 25,
+          "gravity": 0
+        },
+        {
+          "componentType": "element",
+          "element": "fire"
+        },
+        {
+          "componentType": "color",
+          "rgb": [
+            255,
+            255,
+            0
+          ]
+        },
+        {
+          "componentType": "spawnRandAngle"
+        },
+        {
+          "componentType": "impactTrigger",
+          "payload_components": [
+            {
+              "componentType": "explosion",
+              "radius": 256
+            },
+            {
+              "componentType": "element",
+              "element": "fire"
+            },
+            {
+              "componentType": "color",
+              "rgb": [
+                255,
+                60,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+[end]

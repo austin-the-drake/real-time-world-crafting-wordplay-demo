@@ -1,0 +1,230 @@
+You will evaluate the generated automaton script based on the following four axes. This is a challenging task and you should evaluate critically. Score each axis from 1 (poor) to 5 (excellent).
+
+Creative Alignment (1-5):
+(This scale measures how well the automaton matched the core concept or "theme" of the user's description, with an emphasis on presentation.)
+
+	1 (No Connection): The automaton's core function was the opposite of what was requested.
+	2 (Mostly Unrelated): The automaton captured a minor keyword but missed the main theme entirely.
+	3 (Got the Gist): The automaton implemented the main verb or noun of the idea but missed all the creative nuance.
+	4 (Good Match): The automaton successfully captured the core concept and most of the important descriptive details, feeling very close to what was described.
+	5 (Perfect Match): The automaton perfectly captured the core concept and all thematic details, feeling exactly like what was imagined.
+
+Instructional Precision (1-5):
+(This scale measures how well the automaton obeyed any specific, direct commands or constraints the user included, with an emphasis on logic.)
+
+	1 (Ignored All Instructions): The automaton failed to follow multiple explicit instructions.
+	2 (Ignored Key Instructions): The automaton followed minor instructions but ignored a critical, high-priority one.
+	3 (Followed Most Instructions): The automaton followed the main instructions but missed a less critical one or misinterpreted a numerical value significantly.
+	4 (Followed All Instructions, Minor Flaw): The automaton implemented every instruction, but with a tiny imprecision.
+	5 (Followed All Instructions Perfectly): Every single explicit instruction and constraint was implemented precisely as requested.
+
+Emergence (1-5):
+(This scale measures if the automaton's behaviour went above and beyond the user's request in a positive way.)
+
+	1 (Boring/Literal): The automaton was a completely literal and uninspired translation of the prompt with no creative flair whatsoever.
+	2 (Slightly Literal): The automaton was mostly literal but included one tiny, almost unnoticeable detail that suggested a hint of extra thought.
+	3 (Competent but Unsurprising): The automaton was a well-designed and functional implementation of the idea, but it did exactly what was asked and nothing more.
+	4 (Clever Detail): The automaton included a small, unrequested feature or detail that cleverly complemented and improved the core idea.
+	5 (Delightful Surprise): The automaton added a significant, unrequested feature that was a perfect creative fit, making the entire concept much better and more interesting.
+
+Structural & Logical Coherence (1-5):
+(This scale evaluates the syntactic and logical validity of the generated spell.)
+
+This is informed by the "Algorithmic Pre-Check". If the pre-check failed, this score cannot be higher than 2.
+
+	1: Invalid JSON or major structural errors (e.g., components is not a list).
+	3: Valid JSON, but with some data type errors or logical conflicts forbidden by the rules (e.g., a manifestation component having a deathTrigger).
+	5: The entire response is a single, valid JSON object with perfect data types and structure, and it is completely free of any logical contradictions defined in the component rules.
+
+EXAMPLES OF YOUR JUDGEMENT
+
+Example 1 (Good Response):
+Input: A viscous element called "lava" that flows slowly. It catches things on fire, and turns to stone in contact with water.
+Context: existing elements: ["gas", "fire", "water", "stone", "wall", "air", "plant", "wood", "seed"]
+Response to Evaluate:
+```json
+{
+  "name": "lava",
+  "color_hex": "#FF8000",
+  "behavior": {
+    "actions": [
+      {
+        "type": "if_chance",
+        "percent": 4.76,
+        "actions": [
+          {
+            "type": "do_set_alpha",
+            "target": "self",
+            "operation": "set",
+            "to": 100
+          }
+        ]
+      },
+      {
+        "type": "in_rand_rotation",
+        "actions": [
+          {
+            "type": "if_neighbor_is",
+            "direction": "south",
+            "options": ["gas", "plant", "wood", "seed"],
+            "actions": [
+              {
+                "type": "do_set_type",
+                "target": "south",
+                "to": "fire"
+              }
+            ],
+            "else_actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "south",
+                "options": ["water"],
+                "actions": [
+                  {
+                    "type": "do_set_type",
+                    "target": "self",
+                    "to": "stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "if_neighbor_is",
+        "direction": "south",
+        "options": ["air"],
+        "actions": [
+          {
+            "type": "do_swap",
+            "direction": "south"
+          }
+        ],
+        "else_actions": [
+          {
+            "type": "if_chance",
+            "percent": 10,
+            "actions": [
+              {
+                "type": "in_rand_mirror",
+                "actions": [
+                  {
+                    "type": "if_neighbor_is",
+                    "direction": "east",
+                    "options": ["air"],
+                    "actions": [
+                      {
+                        "type": "do_swap",
+                        "direction": "east"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "if_chance",
+            "percent": 1,
+            "actions": [
+              {
+                "type": "if_neighbor_is",
+                "direction": "north",
+                "options": ["air"],
+                "actions": [
+                  {
+                    "type": "do_set_type",
+                    "target": "north",
+                    "to": "fire"
+                  },
+                  {
+                    "type": "do_set_alpha",
+                    "target": "north",
+                    "operation": "set",
+                    "to": 30
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Example of Your Evaluation (JSON Only):
+
+```json
+{
+    "rationales": {
+        "creative_alignment": "The automaton is a great match for the concept of 'lava'. The orange color is appropriate, and the flow logic correctly simulates a viscous liquid by prioritizing downward movement while allowing for slower sideways spread. It correctly implements the core thematic interactions of setting flammable objects on fire and turning to stone when touching water.",
+        "instructional_precision": "All instructions were followed perfectly. The element is named 'lava', it flows slowly, it sets specific elements on fire, and it turns to stone in contact with water. Every constraint was implemented precisely as requested.",
+        "emergence": "The automaton includes a clever, unrequested detail: a 1% chance to create a semi-transparent fire particle in the cell directly above it. This serves as a 'heat shimmer' or 'spark' effect, which creatively enhances the core concept of intense heat without being explicitly asked for.",
+        "structural_coherence": "The response is a single, valid JSON object with perfect data types and structure. All component names and parameters are correct, and there are no logical contradictions."
+    },
+    "scores": {
+        "creative_alignment": 5,
+        "instructional_precision": 5,
+        "emergence": 4,
+        "structural_coherence": 5
+    }
+}
+```
+
+Example 2 (Poor Response):
+Input: An element called "water" that flows naturally
+Context: existing elements: ["air"]
+Response to Evaluate:
+```json
+{
+  "name": "water",
+  "color_hex": "#AAAAAA",
+  "behavior": {
+    "actions": [
+      {
+        "type": "in_rand_rotation",
+        "actions": [
+          {
+            "type": "in_rand_mirror",
+            "actions": [
+              {
+                "type": "in_rand_flip",
+                "actions": [
+                  {
+                    "type": "do_swap",
+                    "direction": "north"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Example of Your Evaluation (JSON Only):
+
+```json
+{
+    "rationales": {
+        "creative_alignment": "The automaton's behavior is the opposite of the core concept. 'Natural flow' for water implies gravity-driven downward movement, but the combination of randomizing wrappers (rotation, mirror, flip) results in a directionless 'random walk' or Brownian motion. Additionally, the gray color is a poor thematic match.",
+        "instructional_precision": "This failed the single most important instruction: to 'flow naturally'. A random walk is a physically inaccurate simulation for a liquid and does not constitute a natural flow pattern, which should be directional.",
+        "emergence": "The behavior is boring and literal in its failure; it implements randomness, but not in a way that is creative, emergent, or beneficial to the prompt. It's a chaotic and incorrect implementation, not a clever one.",
+        "structural_coherence": "While the JSON is technically valid, the logic is deeply flawed. The triple-nested randomization is a convoluted and inefficient way to select a random neighbor. More importantly, the script fails to check if the target neighbor can be displaced (e.g., is 'air'), a critical logical step for any swap-based movement."
+    },
+    "scores": {
+        "creative_alignment": 1,
+        "instructional_precision": 1,
+        "emergence": 1,
+        "structural_coherence": 2
+    }
+}
+```
+
+

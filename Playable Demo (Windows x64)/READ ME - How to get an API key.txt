@@ -1,0 +1,5 @@
+A free Gemini API key can be easily obtained from Google AI Studio:
+
+https://aistudio.google.com/app/apikey
+
+Free-tier keys are plenty capable for this small game prototype. Simply copy the key to your clipboard, and in-game, select "Gemini" as the API provider before pasting your key with the provided button.

@@ -1,0 +1,203 @@
+You will evaluate the generated spell script based on the following four axes. This is a challenging task and you should evaluate critically. "doing the best with what it could" does not deserve extra points; only consider how well the final result fulfils the task, even if there is no good solution possible. scores of 3 are "good, passable". Any mistakes should result in 1 or 2. Score each axis from 1 (poor) to 5 (excellent).
+
+Creative Alignment (1-5):
+(This scale measures how well the spell matched the core concept or "theme" of the user's description, with an emphasis on presentation.)
+
+	1 (No Connection): The spell's core function was the opposite of what was requested.
+	2 (Mostly Unrelated): The spell captured a minor keyword but missed the main theme entirely.
+	3 (Got the Gist): The spell implemented the main verb or noun of the idea but missed all the creative nuance.
+	4 (Good Match): The spell successfully captured the core concept and most of the important descriptive details, feeling very close to what was described.
+	5 (Perfect Match): The spell perfectly captured the core concept and all thematic details, feeling exactly like what was imagined.
+
+Instructional Precision (1-5):
+(This scale measures how well the spell obeyed any specific, direct commands or constraints the user included, with an emphasis on logic.)
+
+	1 (Ignored All Instructions): The spell failed to follow multiple explicit instructions.
+	2 (Ignored Key Instructions): The spell followed minor instructions but ignored a critical, high-priority one.
+	3 (Followed Most Instructions): The spell followed the main instructions but missed a less critical one or misinterpreted a numerical value significantly.
+	4 (Followed All Instructions, Minor Flaw): The spell implemented every instruction, but with a tiny imprecision.
+	5 (Followed All Instructions Perfectly): Every single explicit instruction and constraint was implemented precisely as requested.
+
+Emergence (1-5):
+(This scale measures if the spell's behaviour went above and beyond the user's request in a positive way.)
+
+	1 (Boring): The spell was simpler than what was requested, resulting in an underwhelming surprise.
+	2 (Literal): The spell was a completely literal and uninspired translation of the prompt with no creative flair whatsoever.
+	3 (Competent but Unsurprising): The spell was a well-designed and functional implementation of the idea, but it did exactly what was asked and nothing more.
+	4 (Clever Detail): The spell included a small, unrequested feature or detail that cleverly complemented and improved the core idea.
+	5 (Delightful Surprise): The spell added a significant, unrequested feature that was a perfect creative fit, making the entire concept much better and more interesting.
+
+Structural & Logical Coherence (1-5):
+(This scale evaluates the syntactic and logical validity of the generated spell.)
+
+Be on the lookout for elements appearing in the spell that aren't actually available for use, and apply a penalty if so.
+
+This is informed by the "Algorithmic Pre-Check". If the pre-check failed, this score cannot be higher than 2.
+
+	1: Invalid JSON or major structural errors (e.g., components is not a list).
+	3: Valid JSON, but with some data type errors or logical conflicts forbidden by the rules (e.g., a manifestation component having a deathTrigger).
+	5: The entire response is a single, valid JSON object with perfect data types and structure, and it is completely free of any logical contradictions defined in the component rules.
+
+EXAMPLES OF YOUR JUDGEMENT
+
+Example 1 (Good Response):
+Input: A bomb that releases seemingly harmless powder, but after 3 turns, the powder ignites in a firey plume.
+Context: ["fire", "electric", "earth", "wind", "holy", "neutral"]
+Response to Evaluate:
+
+```json
+{
+  "friendlyName": "Powder trap",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 2,
+      "speed": 15,
+      "bounces": 3
+    },
+    {
+      "componentType": "element",
+      "element": "neutral"
+    },
+    {
+      "componentType": "deathTrigger",
+      "payload_components": [
+        {
+          "componentType": "aoe",
+          "radius": 1,
+          "turns": 3
+        },
+        {
+          "componentType": "element",
+          "element": "neutral"
+        },
+        {
+          "componentType": "timerTrigger",
+          "secs": 0.1,
+          "replace": false,
+          "payload_components": [
+            {
+              "componentType": "manifestation",
+              "radius": 5,
+              "material_properties": {
+                "class": "powder",
+                "color_rgb": [255, 255, 224],
+                "blockpath": true,
+                "density": 1,
+                "elements": ["earth"]
+              }
+            }
+          ]
+        },
+        {
+          "componentType": "deathTrigger",
+          "payload_components": [
+            {
+              "componentType": "manifestation",
+              "radius": 5,
+              "material_properties": {
+                "class": "gas",
+                "color_rgb": [255, 100, 0],
+                "blockpath": false,
+                "density": 0.5,
+                "elements": ["fire"],
+                "harmful": true,
+                "lifespan": 2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+Example of Your Evaluation (JSON Only):
+
+```json
+{
+    "rationales": {
+        "creative_alignment": "The spell perfectly captures the theme of a delayed trap, using a neutral projectile that spawns a powder-releasing AoE, which later ignites as requested.",
+        "instructional_precision": "This response correctly implements the 'bomb' as a projectile, the 'powder' as a manifestation, and the '3 turn' delay via an AoE component with turns=3.",
+        "emergence": "The use of a persistent AoE that continuously manifests powder before its deathTrigger ignites is a clever and unrequested detail that improves the concept.",
+        "structural_coherence": "The script is logically sound, with the delayed fire effect correctly nested inside the deathTrigger of the powder-releasing AoE component."
+    },
+    "scores": {
+        "creative_alignment": 5,
+        "instructional_precision": 5,
+        "emergence": 4,
+        "structural_coherence": 5
+    }
+}
+```
+
+Example 2 (Poor Response):
+Input: A bomb that releases seemingly harmless powder, but after 3 turns, the powder ignites in a firey plume.
+Context: ["fire", "electric", "earth", "wind", "holy", "neutral"]
+Response to Evaluate:
+
+```json
+{
+  "friendlyName": "sneaky fire bomb",
+  "count": 1,
+  "components": [
+    {
+      "componentType": "projectile",
+      "radius": 20,
+      "speed": 15,
+      "bounces": 5
+    },
+    {
+      "componentType": "element",
+      "element": "neutral"
+    },
+    {
+      "componentType": "impactTrigger",
+      "replace": true,
+      "payload_components": [
+        {
+          "componentType": "manifestation",
+          "radius": 5,
+          "material_properties": {
+            "class": "powder",
+            "color_rgb": [255, 255, 255],
+            "blockpath": true,
+            "density": 1,
+            "elements": ["earth"],
+            "lifespan": 5
+          }
+        },
+        {
+          "componentType": "explosion",
+          "radius": 128
+        },
+        {
+          "componentType": "element",
+          "element": "fire"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Example of Your Evaluation (JSON Only):
+
+```json
+{
+    "rationales": {
+        "creative_alignment": "The response includes a bomb and powder, but completely misses the core theme of a delayed, timed ignition.",
+        "instructional_precision": "The script completely ignored the critical instruction for a '3 turn' delay, making the bomb an immediate-impact explosion instead.",
+        "emergence": "This is a completely literal and uninspired translation of 'bomb', with no creative thought given to the timing aspect of the prompt.",
+        "structural_coherence": "While the JSON is valid, placing an 'explosion' and a 'manifestation' at the same level in an impactTrigger breaks the rule of one primary spell class per nesting level."
+    },
+    "scores": {
+        "creative_alignment": 2,
+        "instructional_precision": 1,
+        "emergence": 1,
+        "structural_coherence": 1
+    }
+}
+```
