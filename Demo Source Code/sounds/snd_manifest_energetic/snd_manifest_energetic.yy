@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_manifest_energetic",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.498417,
+  "name":"snd_manifest_energetic",
+  "parent":{
+    "name":"Energetic",
+    "path":"folders/Sound/Energetic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_manifest_energetic.wav",
+  "type":0,
+  "volume":1.0,
+}

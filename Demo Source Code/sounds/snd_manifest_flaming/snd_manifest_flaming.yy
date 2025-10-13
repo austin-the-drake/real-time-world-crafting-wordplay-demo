@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_manifest_flaming",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.098685,
+  "name":"snd_manifest_flaming",
+  "parent":{
+    "name":"Flaming",
+    "path":"folders/Sound/Flaming.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_manifest_flaming.wav",
+  "type":0,
+  "volume":1.0,
+}

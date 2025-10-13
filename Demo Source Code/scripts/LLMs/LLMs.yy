@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"LLMs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LLMs",
+  "parent":{
+    "name":"LLMs",
+    "path":"folders/LLMs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

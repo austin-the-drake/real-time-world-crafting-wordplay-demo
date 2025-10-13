@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GlobalScopeFuncs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GlobalScopeFuncs",
+  "parent":{
+    "name":"LatentSpace",
+    "path":"LatentSpace.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

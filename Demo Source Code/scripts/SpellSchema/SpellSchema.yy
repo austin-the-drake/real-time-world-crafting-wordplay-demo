@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SpellSchema",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpellSchema",
+  "parent":{
+    "name":"LatentSpace",
+    "path":"LatentSpace.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

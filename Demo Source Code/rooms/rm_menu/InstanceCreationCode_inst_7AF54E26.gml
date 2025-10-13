@@ -1,0 +1,2 @@
+text = "About";
+action = "about";

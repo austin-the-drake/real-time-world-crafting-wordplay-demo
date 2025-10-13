@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_impact_blowing",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.706646,
+  "name":"snd_impact_blowing",
+  "parent":{
+    "name":"Blowing",
+    "path":"folders/Sound/Blowing.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_impact_blowing.wav",
+  "type":0,
+  "volume":1.0,
+}
