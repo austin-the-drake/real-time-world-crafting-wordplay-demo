@@ -3,3 +3,5 @@ We present a novel architecture for safely integrating Large Language Models (LL
 A playable build of the developed software artifact is provided for Windows x64. Playing requires that your own API key be provided; instructions to obtain a free API key from Google are provided along with the game.
 
 The analysis code is provided as a mixture of Python and R, along with the generated data. The Python code's dependencies can be installed quickly with the included requirements.txt file, or by installing the packages listed in the main code notebook. Python 3.11 or later is required. R was used via RStudio, but any R installation should work. A text file containing all R outputs used for the final report is also provided.
+
+Read the paper on ArXiv: https://doi.org/10.48550/arXiv.2510.16952
